@@ -1,0 +1,35 @@
+{{!< default}}
+
+<div class="it-page">
+    <div class="it-container">
+
+        {{#tag}}
+        <header class="it-page-head">
+
+            <h1>{{name}}</h1>
+
+            <p>
+                {{#if description}}
+                    {{description}}
+                {{else}}
+                    A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+                {{/if}}
+            </p>
+
+            {{#if feature_image}}
+                <img class="it-page-image" src="{{feature_image}}" alt="{{name}}" />
+            {{/if}}
+
+        </header>
+        {{/tag}}
+
+        <div class="it-postfeed">
+        {{#foreach posts}}
+
+            {{> "card"}} {{!-- partials/card.hbs --}}
+
+        {{/foreach}}
+        </div>
+
+    </div>
+</div>

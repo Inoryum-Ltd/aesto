@@ -1,0 +1,46 @@
+{{!< default}}
+
+<div class="it-page">
+    <div class="it-container">
+
+        {{#author}}
+        <header class="it-page-head">
+            {{#if profile_image}}
+                <img class="it-author-image" src="{{profile_image}}" alt="{{name}}" />
+            {{/if}}
+
+            <h1>{{name}}</h1>
+            {{#if bio}}
+                <p>{{bio}}</p>
+            {{/if}}
+
+            <div class="it-author-meta">
+                <div class="it-author-links">
+                    {{#if website}}
+                        <a href="{{website}}" target="_blank" rel="noopener">Website</a>
+                    {{/if}}
+                    {{#if twitter}}
+                        <a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a>
+                    {{/if}}
+                    {{#if facebook}}
+                        <a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a>
+                    {{/if}}
+                </div>
+            </div>
+
+            {{#if cover_image}}
+                <img class="it-page-image" src="{{cover_image}}" alt="{{name}}" />
+            {{/if}}
+        </header>
+        {{/author}}
+
+        <div class="it-postfeed">
+        {{#foreach posts}}
+
+            {{> "card"}} {{!-- partials/card.hbs --}}
+
+        {{/foreach}}
+        </div>
+
+    </div>
+</div>

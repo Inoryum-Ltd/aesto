@@ -1,0 +1,54 @@
+{{!< default}}
+
+{{#post}}
+
+<article class="it-article {{post_class}} {{#if feature_image}}has-feature-image{{/if}}">
+
+    <header class="it-header it-canvas">
+        <span class="it-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+        <h1 class="it-title">{{title}}</h1>
+        {{#if feature_image}}
+            <div class="it-feature-image-wrapper">
+                <img class="it-feature-image" src="{{feature_image}}" alt="{{title}}" />
+            </div>
+        {{/if}}
+        {{#if custom_excerpt}}
+        <p class="it-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+        
+    </header>
+
+    <div class="it-content it-canvas">
+        {{content}}
+    </div>
+
+    <footer class="it-footer it-canvas">
+
+        <div class="it-post-authors">
+            Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
+        </div>
+
+        {{!--
+        <section class="it-post-comments">
+            If you want to embed comments, this is a good place to do it!
+        </section>
+        --}}
+
+    </footer>
+
+</article>
+
+<aside class="it-readmore">
+    <div class="it-readmore-inner it-container">
+        <div class="it-readmore-next">
+            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <h4>{{title}}</h4></a>{{/next_post}}
+        </div>
+        <div class="it-readmore-prev">
+            {{#prev_post}}<a href="{{url}}">
+                <h4>{{title}}</h4> {{> "icons/arrow-right"}}
+            </a>{{/prev_post}}
+        </div>
+    </div>
+</aside>
+
+{{/post}}

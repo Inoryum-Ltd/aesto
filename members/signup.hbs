@@ -1,0 +1,75 @@
+{{!< ../default}}
+
+<div class="it-page">
+    <div class="it-container">
+
+    {{#if @member.paid}}
+
+        {{!-- Logged in, paying member: Redirect home --}}
+        <script>window.location = '{{@site.url}}';</script>
+
+    {{else if @member}}
+
+        {{!-- Logged in, not paying: Check out --}}
+        <div class="it-checkout-form">
+            <h1 class="it-checkout-title">Choose your subscription</h1>
+            <p>Unlock full access to {{@site.title}} and see the entire library of members-only content & updates</p>
+            <div class="it-checkout-box">
+                <div class="it-checkout-plan">
+                    <header class="it-checkout-plan-header">
+                        <h3>Monthly</h3>
+                        <span>$</span><strong>{{@price.monthly}}</strong> / month
+                    </header>
+                    <div class="it-checkout-plan-content">
+                        <ul>
+                            <li>Full access to all private posts</li>
+                            <li>Regular updates with new content</li>
+                            <li>Support independent publishing</li>
+                            <li>Simple, secure card payment</li>
+                        </ul>
+                        <a class="button primary fit" href="javascript:void(0)" data-members-plan="Monthly">Choose this plan</a>
+                    </div>
+                </div>
+                <div class="it-checkout-plan">
+                    <header class="it-checkout-plan-header">
+                        <h3>Yearly</h3>
+                        <span>$</span><strong>{{@price.yearly}}</strong> / year
+                    </header>
+                    <div class="it-checkout-plan-content">
+                        <ul>
+                            <li>Full access to all private posts</li>
+                            <li>Regular updates with new content</li>
+                            <li>Support independent publishing</li>
+                            <li>Simple, secure card payment</li>
+                            <li>One easy payment instead of 12!</li>
+                        </ul>
+                        <a class="button primary fit" href="javascript:void(0)" data-members-plan="Yearly">Choose this plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{else}}
+
+        {{!-- Not logged in: Sign up --}}
+        <form class="it-auth-form" data-members-form="signup">
+            <h1 class="it-auth-title">Signup to {{@site.title}}</h1>
+            <p>{{@site.description}}</p>
+            <div class="it-auth-box">
+                <input class="it-input" data-members-email type="email" placeholder="Type your email..." required="true" autocomplete="false" />
+                <button class="it-button it-button-primary" type="submit">
+                    <span class="it-button-content">Continue</span>
+                    <span class="it-button-loader">{{> "icons/loader"}}</span>
+                </button>
+            </div>
+            <p><small>Already have an account? <a href="/signin/">Sign in</a></small></p>
+            <div class="message-success"><strong>Great!</strong> Check your inbox and click the link to confirm your subscription</div>
+            <div class="message-error">Please enter a valid email address!</div>
+        </form>
+
+    {{/if}}
+
+    </div>
+</div>
+
+<style>.pico-cta{display:none;}</style>

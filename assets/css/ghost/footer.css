@@ -1,0 +1,57 @@
+/* Global Footer
+/* ---------------------------------------------------------- */
+
+.it-foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8vmin 4vw;
+}
+
+.it-foot .it-container {
+    width: auto;
+}
+
+.it-foot a {
+    color: inherit;
+}
+
+.it-foot-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.it-foot-menu .nav {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.8rem;
+}
+
+.it-foot-menu .nav li {
+    margin: 0 1.5vmin;
+    padding: 0;
+}
+
+.it-foot-menu .nav a {
+    display: inline-block;
+    padding: 3px 0;
+    text-decoration: none;
+    box-shadow: 0 -1px 0 0 currentcolor inset;
+}
+
+.it-foot-meta {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+    .it-foot-menu .nav {
+        font-size: 1.6rem;
+    }
+}

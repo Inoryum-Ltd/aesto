@@ -1,0 +1,23 @@
+{{!< default}}
+
+{{#post}}
+<article class="it-article {{post_class}}">
+
+    <header class="it-header it-canvas">
+        <h1 class="it-title">{{title}}</h1>
+
+        {{#if custom_excerpt}}
+            <p class="it-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+
+        {{#if feature_image}}
+            <img class="it-feature-image" src="{{feature_image}}" alt="{{title}}" />
+        {{/if}}
+    </header>
+
+    <div class="it-content it-canvas">
+        {{content}}
+    </div>
+
+</article>
+{{/post}}

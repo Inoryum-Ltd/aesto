@@ -1,0 +1,60 @@
+/* Error Templates
+/* ---------------------------------------------------------- */
+
+.it-error {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2vmin;
+}
+
+.it-error-content {
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+.it-error-code {
+    margin: 0;
+    font-size: 14vmin;
+}
+
+.it-error-description {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    font-size: 4vmin;
+    line-height: 1.2em;
+    font-weight: 300;
+    opacity: 0.6;
+}
+
+.it-error-link {
+    display: block;
+    margin-top: 4vmin;
+    font-size: 1.6rem;
+}
+
+.it-error-stack {
+    max-width: 600px;
+    margin: 0 auto 0;
+    padding: 8vmin 0;
+    text-align: left;
+}
+
+.it-error-stack-list {
+    margin: 4vmin 0 0;
+    font-size: 1.4rem;
+}
+
+.it-error-stack-list > li {
+    padding: 2rem 0;
+    margin: 0;
+    border-top: rgba(0,0,0,0.1) 1px solid;
+}
+
+.it-error-stack-function {
+    margin: 0 0 0.5em;
+    font-size: 1.8rem;
+    color: red;
+}

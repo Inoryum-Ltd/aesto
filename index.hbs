@@ -1,0 +1,15 @@
+{{!< default}}
+
+<div class="it-page">
+    <div class="it-container">
+
+        {{> "featured"}}
+        
+        <div class="it-postfeed">
+            {{#foreach posts}}
+                {{> "card"}} {{!-- partials/card.hbs --}}
+            {{/foreach}}
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,47 @@
+		{{#get "posts" limit="5" filter="featured:true" include="tags,authors"}}
+			<div class="it-hero featured">
+					{{#foreach posts}}
+				<article class="it-hero-inner" style="background-image: url('{{feature_image}}')">
+					<div class="it-hero-contents">
+						{{#foreach tags}}
+										<span class="it-post-card-tags">
+											<a href="{{url}}" title="{{title}}">#{{name}}</a>
+										</span>
+									{{/foreach}}
+						<h2>{{title}}</h2>
+						<div class="it-post-card-meta">
+							by
+							<span class="it-post-card-by">{{#has author="count:1"}}
+								{{#primary_author}}
+								<a href="{{url}}">{{name}}</a>
+								{{/primary_author}}
+								{{else}}
+								{{#has author="count:2"}}
+								{{#if authors}}
+								{{#foreach authors}}
+								<a href="{{url}}">{{name}}</a>
+								{{#if @first}}
+								{{t "&"}}
+								{{/if}}
+								{{/foreach}}
+								{{/if}}
+								{{else}}
+								{{#has author="count:>2"}}
+								{{#primary_author}}
+								<a href="{{url}}">{{name}}</a>
+								{{/primary_author}}
+								{{t "and others"}}
+								{{/has}}
+								{{/has}}
+								{{/has}}
+								</span>
+									
+									
+						</div>
+						
+					</div>
+			</article>
+			{{/foreach}}
+				
+		</div>
+		{{/get}}
