@@ -3,13 +3,14 @@
 <div class="it-page">
     <div class="it-container">
 
-        {{> "featured"}}
-        
+        {{> "featured"}} {{!-- partials/featured.hbs --}}
         <div class="it-postfeed">
-            {{#foreach posts}}
-                {{> "card"}} {{!-- partials/card.hbs --}}
-            {{/foreach}}
+            {{> "loop"}} {{!-- partials/loop.hbs --}}
         </div>
+        
+        {{pagination}} {{!-- partials/pagination.hbs --}}
+        
+        {{> "popular-tags"}}
 
     </div>
 </div>

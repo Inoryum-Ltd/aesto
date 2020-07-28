@@ -46,11 +46,12 @@ html,
     padding: 0 4vw;
 }
 
-.it-article {
-    padding: 5vmin 0;
-}
-
 .it-postfeed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
     padding: 5vmin 0;
 }
 
@@ -83,8 +84,8 @@ html,
 /* Index
 /* ---------------------------------------------------------- */
 
-.it-card:not(:first-child) {
-    margin: 8vmin auto 0;
+.it-card {
+    margin: 0;
 }
 
 .it-card-link {
@@ -94,26 +95,38 @@ html,
 
 .it-card-image {
     width: 100%;
-    max-height: 700px;
+    -o-object-fit: cover;
     object-fit: cover;
-    margin-bottom: 4vmin;
+    height: 290px;
+    position: relative;
+    border-radius: 7px;
 }
 
 .it-card-meta {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr auto;
     margin: 0 0 1rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.2em;
-    letter-spacing: 0.5px;
+    letter-spacing: .5px;
+}
+.it-card-meta a {
+    color: var(--color-primary);
+    text-decoration: none;
     text-transform: uppercase;
-    opacity: 0.8;
+    font-weight: 600;
+}
+.it-tag-hash {
+    font-size: 1.7rem;
+    margin-right: 1px;
 }
 
+
 .it-card-content {
-    max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
+    text-align: left;
     font-size: 1.6rem;
+    z-index: 99;
+    padding: 1em 0;
 }
 
 .it-card-content p {
@@ -163,7 +176,7 @@ html,
 /* ---------------------------------------------------------- */
 
 .it-header {
-    padding: 0 0 8vmin 0;
+    padding: 0 0 4vmin 0;
 }
 
 .it-post-meta {
@@ -182,11 +195,14 @@ html,
 }
 .it-feature-image-wrapper {
     grid-column: wide-start/wide-end;
+    border-radius: 7px;
+    overflow: hidden;
 }
+
 .it-feature-image {
     width: 100%;
-    margin: 5vmin 0 0;
     max-height: 490px;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 

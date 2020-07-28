@@ -1,116 +1,33 @@
 <!DOCTYPE html>
 <html lang="{{@site.lang}}">
-<head>
-
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
-
-    <title>{{meta_title}}</title>
-
-    {{ghost_head}}
-    {{!-- Outputs SEO meta+structured data and important settings, should always be in <head> --}}
-
-</head>
-<body class="{{body_class}}">
-<div class="it-viewport">
-
-<header id="it-head" class="it-head">
-    <nav class="it-head-inner it-container">
-
-        <div class="it-head-brand">
-            <a class="it-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
-            <a class="it-burger" role="button">
-                <div class="it-burger-box">
-                    <div class="it-burger-inner"></div>
-                </div>
-            </a>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    
+        <title>{{meta_title}}</title>
+        
+        <script>
+            var pagination_next_page_number       = '{{ pagination.next }}',
+                pagination_available_pages_number = '{{ pagination.pages }}';
+        </script>
+    
+        {{ghost_head}}
+        {{!-- Outputs SEO meta+structured data and important settings, should always be in <head> --}}
+    </head>
+    
+    <body class="{{body_class}}">
+        <div class="it-viewport">
+            {{> "site-structure/site-header"}}
+            <main class="it-main">
+                {{{body}}}
+                {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
+            </main>
+            {{> "site-structure/site-footer"}}
         </div>
-        <div class="it-head-menu">
-            {{navigation}}
-        </div>
-        <div class="it-head-actions">
-            <div class="it-head-actions-list">
-                {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                {{/if}}
-                {{#if @site.twitter}}
-                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                {{/if}}
-                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<main class="it-main">
-
-    {{{body}}}
-    {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
-
-</main>
-
-<footer class="it-foot">
-    <div class="it-container">
-        <div class="it-foot-menu">
-            {{navigation}}
-        </div>
-        <div class="it-foot-meta">
-            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-        </div>
-    </div>
-</footer>
-
-</div>
-
-{{!-- <foot> --}}
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-{{#if pagination.pages}}
-    <script>
-        var maxPages = parseInt('{{pagination.pages}}');
-    </script>
-    <script src="{{asset "built/infinitescroll.js"}}"></script>
-{{/if}}
-
-<script>
-    $(document).ready(function () {
-        // Mobile Menu Trigger
-        $('.it-burger').click(function () {
-            $('body').toggleClass('it-head-open');
-        });
-    });
-</script>
-
-{{#is "post, page"}}
-    <script src="{{asset "built/jquery.fitvids.js"}}"></script>
-    <script>
-    var images = document.querySelectorAll('.kg-gallery-image img');
-    images.forEach(function (image) {
-        var container = image.closest('.kg-gallery-image');
-        var width = image.attributes.width.value;
-        var height = image.attributes.height.value;
-        var ratio = width / height;
-        container.style.flex = ratio + ' 1 0%';
-    });
-    $(document).ready(function () {
-        var $postContent = $(".it-content");
-        $postContent.fitVids();
-    });
-    </script>
-{{/is}}
-
-{{ghost_foot}}
-{{!-- Outputs important scripts - should always be included before closing body tag --}}
-
-</body>
+        {{> "site-structure/site-scripts"}} 
+        {{ghost_foot}} {{!-- Outputs important scripts - should always be included before closing body tag --}}
+    </body>
 </html>

@@ -1,0 +1,63 @@
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+<script>
+    $(document).ready(function () {
+        // Mobile Menu Trigger
+        $('.it-burger').click(function () {
+            $('body').toggleClass('it-head-open');
+        });
+    });
+</script>
+
+{{#is "post, page"}}
+    <script src="{{asset "built/jquery.fitvids.js"}}"></script>
+    <script>
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function (image) {
+        var container = image.closest('.kg-gallery-image');
+        var width = image.attributes.width.value;
+        var height = image.attributes.height.value;
+        var ratio = width / height;
+        container.style.flex = ratio + ' 1 0%';
+    });
+    $(document).ready(function () {
+        var $postContent = $(".it-content");
+        $postContent.fitVids();
+    });
+    </script>
+{{/is}}
+
+<script>
+
+    var pagination_next_url = $('link[rel=next]').attr('href'),
+        $load_posts_button  = $('.it-load-posts');
+
+    $load_posts_button.click(function(e) {
+        e.preventDefault();
+
+        var request_next_link = pagination_next_url.split(/page/)[0] + 'page/' + pagination_next_page_number + '/';
+
+        $.ajax({
+        url: request_next_link,
+        beforeSend: function() {
+            $load_posts_button.text('Loading');
+            $load_posts_button.addClass('button--loading');
+        }
+        }).done(function(data) {
+            var posts = $('.post', data);
+
+            $load_posts_button.text('Load More');
+            $load_posts_button.removeClass('button--loading');
+
+            $('.it-postfeed').append(posts);
+
+            pagination_next_page_number++;
+
+            // If you are on the last pagination page, add the disabled attribute
+            if (pagination_next_page_number > pagination_available_pages_number) {
+                $load_posts_button.attr('disabled', true);
+            }
+        });
+    });
+</script>

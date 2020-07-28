@@ -1,0 +1,33 @@
+<header id="it-head" class="it-head">
+    <nav class="it-head-inner it-container">
+
+        <div class="it-head-brand">
+            <a class="it-head-logo" href="{{@site.url}}">
+                {{#if @site.logo}}
+                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
+                {{else}}
+                    {{@site.title}}
+                {{/if}}
+            </a>
+            <a class="it-burger" role="button">
+                <div class="it-burger-box">
+                    <div class="it-burger-inner"></div>
+                </div>
+            </a>
+        </div>
+        <div class="it-head-menu">
+            {{navigation}}
+        </div>
+        <div class="it-head-actions">
+            <div class="it-head-actions-list">
+                {{#if @site.facebook}}
+                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                {{/if}}
+                {{#if @site.twitter}}
+                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                {{/if}}
+                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -5,13 +5,13 @@
 <article class="it-article {{post_class}} {{#if feature_image}}has-feature-image{{/if}}">
 
     <header class="it-header it-canvas">
-        <span class="it-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-        <h1 class="it-title">{{title}}</h1>
         {{#if feature_image}}
             <div class="it-feature-image-wrapper">
                 <img class="it-feature-image" src="{{feature_image}}" alt="{{title}}" />
             </div>
         {{/if}}
+        <span class="it-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+        <h1 class="it-title">{{title}}</h1>
         {{#if custom_excerpt}}
         <p class="it-excerpt">{{custom_excerpt}}</p>
         {{/if}}

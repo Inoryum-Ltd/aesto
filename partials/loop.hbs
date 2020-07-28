@@ -1,11 +1,12 @@
-		{{#get "posts" limit="5" filter="featured:true" include="tags,authors"}}
-			<div class="it-hero featured">
-					{{#foreach posts}}
-				<article class="it-hero-inner">
-					<a class="it-link-overlay" href="{{url}}"></a>
-					{{#if feature_image}}
-						<picture class="it-feature-card-image">
-							<img srcset="{{img_url feature_image size="s"}} 300w,
+{{!--
+Re-usable card for linking to posts
+--}}
+{{#foreach posts}}
+    <article class="it-card {{post_class}}">
+        <a class="it-card-link" href="{{url}}">
+            {{#if feature_image}}
+                <img class="it-card-image"
+                    srcset="{{img_url feature_image size="s"}} 300w,
                             {{img_url feature_image size="m"}} 600w,
                             {{img_url feature_image size="l"}} 1000w,
                             {{img_url feature_image size="xl"}} 2000w"
@@ -13,10 +14,10 @@
                     src="{{img_url feature_image size="m"}}"
                     alt="{{title}}"
                 />
-						</picture>
-					{{/if}}
-					<div class="it-hero-contents">
-						<div class="it-card-meta">
+            {{/if}}
+        </a>
+        <div class="it-card-content">
+            <div class="it-card-meta">
                 {{#foreach tags limit="1"}}
 				<span class="it-post-card-tags">
 					<a href="{{url}}" title="{{title}}"><span class="it-tag-hash">&#35;</span>{{name}}</a>
@@ -52,10 +53,9 @@
 			</span> 
 								
 			</div>
-						<h2>{{title}}</h2>
-					</div>
-			</article>
-			{{/foreach}}
-				
-		</div>
-		{{/get}}
+            <a class="it-card-link" href="{{url}}">
+                <h2 class="it-card-title">{{title}}</h2>
+            </a>
+        </div>
+    </article>
+{{/foreach}}

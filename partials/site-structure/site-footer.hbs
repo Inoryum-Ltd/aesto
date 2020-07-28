@@ -1,0 +1,13 @@
+<footer class="it-foot">
+    <div class="it-container">
+        {{> "subscribe"}}
+        <div class="it-foot-menu">
+            {{#if @site.secondary_navigation}}
+ {{navigation type="secondary"}}
+ {{/if}}
+        </div>
+        <div class="it-foot-meta">
+            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+        </div>
+    </div>
+</footer>
