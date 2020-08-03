@@ -6,11 +6,51 @@
 
     <header class="it-header it-canvas">
         {{#if feature_image}}
-            <div class="it-feature-image-wrapper">
-                <img class="it-feature-image" src="{{feature_image}}" alt="{{title}}" />
-            </div>
+            <figure class="it-feature-image-wrapper">
+                <img class="it-feature-image" 
+                    srcset="{{img_url feature_image size="s"}} 300w,
+                            {{img_url feature_image size="m"}} 600w,
+                            {{img_url feature_image size="l"}} 1000w,
+                            {{img_url feature_image size="xl"}} 2000w"
+                    sizes="(max-width: 1000px) 490px, 1200px"
+                    src="{{img_url feature_image size="m"}}"
+                    alt="{{title}}"
+                />
+            </figure>
         {{/if}}
-        <span class="it-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+        <div class="it-post-meta">
+            <span class="it-post-by">
+			{{#has author="count:1"}}
+				{{#primary_author}}
+					<a href="{{url}}">{{name}}</a>
+				{{/primary_author}}
+			{{else}}
+			{{#has author="count:2"}}
+				{{#if authors}}
+					{{#foreach authors}}
+						<a href="{{url}}">{{name}}</a>
+						{{#if @first}}
+							{{t "&"}}
+						{{/if}}
+					{{/foreach}}
+				{{/if}}
+				{{else}}
+				{{#has author="count:>2"}}
+						{{#primary_author}}
+							<a href="{{url}}">{{name}}</a>
+							{{/primary_author}}
+							{{t "and others"}}
+				{{/has}}
+				{{/has}}
+				{{/has}}
+			</span>
+			<span class="it-pipe">&#124;</span>
+            <span>
+                <time datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
+            </span> 
+            <span class="it-pipe">&#124;</span> 
+            <span>{{reading_time}}</span>
+            </div>
         <h1 class="it-title">{{title}}</h1>
         {{#if custom_excerpt}}
         <p class="it-excerpt">{{custom_excerpt}}</p>
@@ -23,9 +63,14 @@
     </div>
 
     <footer class="it-footer it-canvas">
-
-        <div class="it-post-authors">
-            Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
+        <div class="it-post-info">
+            <div class="it-post-tags">
+                {{#foreach tags}}
+						<a href="{{url}}" title="{{title}}" class="it-button-tag">{{name}}</a>
+			    {{/foreach}}
+            </div>
+            {{> "social-share"}}
+            
         </div>
 
         {{!--
@@ -41,12 +86,38 @@
 <aside class="it-readmore">
     <div class="it-readmore-inner it-container">
         <div class="it-readmore-next">
-            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <h4>{{title}}</h4></a>{{/next_post}}
+            {{#next_post}}
+                <a href="{{url}}">
+                    <div class="it-readmore-media">
+                        {{#if feature_image}}
+                        <img src="{{feature_image}}" alt="{{title}}">
+                        {{/if}}
+                    </div>
+                    <div class="it-readmore-content">
+                        <div class="it-arrow-wrapper">
+                            {{> "icons/arrow-left"}} {{t "Next Post"}}
+                        </div>
+                        <h4>{{title}}</h4>
+                    </div>
+                </a>
+            {{/next_post}}
         </div>
         <div class="it-readmore-prev">
-            {{#prev_post}}<a href="{{url}}">
-                <h4>{{title}}</h4> {{> "icons/arrow-right"}}
-            </a>{{/prev_post}}
+            {{#prev_post}}
+                <a href="{{url}}">
+                    <div class="it-readmore-content">
+                        <div class="it-arrow-wrapper">
+                            {{t "Previous Post"}} {{> "icons/arrow-right"}} 
+                        </div>
+                        <h4>{{title}}</h4> 
+                    </div>
+                    <div class="it-readmore-media">
+                        {{#if feature_image}}
+                        <img src="{{feature_image}}" alt="{{title}}">
+                        {{/if}}
+                    </div>
+                </a>
+            {{/prev_post}}
         </div>
     </div>
 </aside>

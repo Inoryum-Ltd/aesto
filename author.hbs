@@ -4,39 +4,53 @@
     <div class="it-container">
 
         {{#author}}
-        <header class="it-page-head">
+        <header class="it-header it-canvas">
+            {{#if cover_image}}
+	            <figure class="it-feature-image-wrapper">
+	                <img class="it-feature-image" 
+	                    srcset="{{img_url cover_image size="s"}} 300w,
+	                            {{img_url cover_image size="m"}} 600w,
+	                            {{img_url cover_image size="l"}} 1000w,
+	                            {{img_url cover_image size="xl"}} 2000w"
+	                    sizes="(max-width: 1000px) 490px, 1200px"
+	                    src="{{img_url cover_image size="m"}}"
+	                    alt="{{title}}"
+	                />
+	            </figure>
+	        {{/if}}
             {{#if profile_image}}
-                <img class="it-author-image" src="{{profile_image}}" alt="{{name}}" />
+                <img class="it-author-image {{#unless cover_image}}no-cover{{/unless}}" src="{{profile_image}}" alt="{{name}}" />
             {{/if}}
 
-            <h1>{{name}}</h1>
+            <h1 class="it-title">{{name}}</h1>
             {{#if bio}}
-                <p>{{bio}}</p>
+                <p class="it-excerpt">{{bio}}</p>
             {{/if}}
 
             <div class="it-author-meta">
                 <div class="it-author-links">
+                    {{#if location}}
+                        <a href="#" target="_blank" rel="noopener">{{> "icons/pin"}} {{location}}</a>
+                    {{/if}}
                     {{#if website}}
-                        <a href="{{website}}" target="_blank" rel="noopener">Website</a>
+                        <a href="{{website}}" target="_blank" rel="noopener">{{> "icons/link"}}</a>
                     {{/if}}
                     {{#if twitter}}
-                        <a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a>
+                        <a href="{{twitter_url}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
                     {{/if}}
                     {{#if facebook}}
-                        <a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a>
+                        <a href="{{facebook_url}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
                     {{/if}}
                 </div>
             </div>
-
-            {{#if cover_image}}
-                <img class="it-page-image" src="{{cover_image}}" alt="{{name}}" />
-            {{/if}}
         </header>
         {{/author}}
 
-        <div class="it-postfeed">
+        <div class="it-postfeed it-grid-c3">
             {{> "loop"}} {{!-- partials/card.hbs --}}
         </div>
+        
+        {{pagination}} {{!-- partials/pagination.hbs --}}
 
     </div>
 </div>

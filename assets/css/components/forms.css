@@ -1,6 +1,8 @@
 /* Forms
 /* ---------------------------------------------------------- */
-
+.it-label {
+    margin-bottom: 2vmin;
+}
 .it-input,
 .it-textarea {
     background: var(--color-bg);
@@ -105,4 +107,41 @@
 
 .it-check + label:before {
     border-radius: 100%;
+}
+/* subscription form */
+
+.it-subscribe-content {
+    background: #fff;
+    padding: 2vmin;
+    color: #666;
+    border-radius: 7px;
+    box-shadow: 5px 5px 6px -1px #ddd;
+    margin-top: 2rem;
+}
+.it-subscribe-title {
+    font-size: 1.7rem;
+}
+.it-subscribe-description {
+    margin-bottom: 2em;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-top: 1em;
+}
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.subscribe-form-input {
+    outline: 0;
+    box-shadow: 0 0 0 0;
+    border: 1px solid #e1edf4;
+    padding: .5rem;
+    flex: 1;
+}
+.subscribe-form-button {
+    background: #ff8c00;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    color: #fff;
+    margin-left: -4px;
 }

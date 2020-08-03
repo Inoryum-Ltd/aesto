@@ -1,4 +1,27 @@
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="{{asset "built/jquery-3.4.1.min.js"}}"></script>
+<script src="https://cdn.jsdelivr.net/gh/gmfmi/searchinghost-easy@latest/dist/searchinghost-easy-basic.js"></script>
+
+
+{{#is "post, page"}}
+    <script src="{{asset "built/jquery.fitvids.js"}}"></script>
+    <script>
+    // Kg Gallery
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function (image) {
+        var container = image.closest('.kg-gallery-image');
+        var width = image.attributes.width.value;
+        var height = image.attributes.height.value;
+        var ratio = width / height;
+        container.style.flex = ratio + ' 1 0%';
+    });
+    
+    // Fit vids
+    $(document).ready(function () {
+        var $postContent = $(".it-content");
+        $postContent.fitVids();
+    });
+    </script>
+{{/is}}
 
 
 <script>
@@ -8,28 +31,9 @@
             $('body').toggleClass('it-head-open');
         });
     });
-</script>
-
-{{#is "post, page"}}
-    <script src="{{asset "built/jquery.fitvids.js"}}"></script>
-    <script>
-    var images = document.querySelectorAll('.kg-gallery-image img');
-    images.forEach(function (image) {
-        var container = image.closest('.kg-gallery-image');
-        var width = image.attributes.width.value;
-        var height = image.attributes.height.value;
-        var ratio = width / height;
-        container.style.flex = ratio + ' 1 0%';
-    });
-    $(document).ready(function () {
-        var $postContent = $(".it-content");
-        $postContent.fitVids();
-    });
-    </script>
-{{/is}}
-
-<script>
-
+    
+    
+    // Search
     var pagination_next_url = $('link[rel=next]').attr('href'),
         $load_posts_button  = $('.it-load-posts');
 
@@ -60,4 +64,13 @@
             }
         });
     });
+    
+     //search 
+    new SearchinGhostEasy({
+        contentApiKey: content_key,
+        apiUrl: api_url
+    });
+    
+    
 </script>
+

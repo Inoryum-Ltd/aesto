@@ -2,32 +2,39 @@
     <nav class="it-head-inner it-container">
 
         <div class="it-head-brand">
-            <a class="it-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
+            <h1>
+                <a class="it-head-logo" href="{{@site.url}}">
+                    {{#if @site.logo}}
+                        <img src="{{@site.logo}}" alt="{{@site.title}}" />
+                    {{else}}
+                        {{@site.title}}
+                    {{/if}}
+                </a>
+            </h1>
             <a class="it-burger" role="button">
                 <div class="it-burger-box">
                     <div class="it-burger-inner"></div>
                 </div>
             </a>
+            
         </div>
         <div class="it-head-menu">
             {{navigation}}
         </div>
         <div class="it-head-actions">
             <div class="it-head-actions-list">
-                {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                {{#if @labs.members}}
+                	{{#if @member}}
+                		<a class="account-link" href="{{@site.url}}/account/" title="{{t "Account"}}" >{{t "Account"}}</a>
+                		<a href="#signout" data-members-signout>{{t "Sign out"}}</a>
+                	{{else}}
+                		<a class="signin-link" href="{{@site.url}}/signin/" title="{{t "Signin"}}" >{{t "Signin"}}</a>
+                	    <a class="signup-link" href="{{@site.url}}/signup/" title="{{t "Signup"}}" >{{t "Signup"}}</a>
+                	    <a class="search-link" href="#searchinghost-easy" title="{{t "Search"}}" >{{> "icons/search"}}</a>
+                	{{/if}}
                 {{/if}}
-                {{#if @site.twitter}}
-                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                {{/if}}
-                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
             </div>
         </div>
     </nav>
 </header>
+

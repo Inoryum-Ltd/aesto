@@ -1,0 +1,82 @@
+/* Global Footer
+/* ---------------------------------------------------------- */
+
+.it-foot {
+    display: flex;
+    padding: 8vmin 4vw 4vmin;
+    background: #f5f6f8;
+}
+.it-foot-inner {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 2fr 2fr;
+}
+.it-foot-inner h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+.it-foot-tag a {
+    margin: 0 1rem 1rem 0;
+    text-decoration: none;
+    display: inline-block;
+}
+.it-foot a {
+    color: inherit;
+}
+.it-foot-brand {
+    padding-right: 2rem;
+}
+.it-foot-logo {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.it-foot-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.it-foot-menu .nav {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+.it-foot-menu .nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.it-foot-menu .nav a {
+    display: inline-block;
+    padding: 3px 0;
+    text-decoration: none;
+}
+
+.it-foot-meta {
+    margin: 8vmin 0 0;
+}
+.it-foot-social {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    grid-column-start: 4;
+    margin-top: 8vmin;
+}
+.it-foot-social a {
+    margin-left: .8rem;
+    display: inline-block;
+}
+.it-foot-social a svg {
+    height: 1.4rem;
+}
+
+
+@media (max-width: 700px) {
+    .it-foot-menu .nav {
+        font-size: 1.6rem;
+    }
+}

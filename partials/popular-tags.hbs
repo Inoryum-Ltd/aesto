@@ -1,22 +1,31 @@
-<div class="it-popular-tags">
-	{{#get "tags" limit="7" include="count.posts" order="count.posts desc"}}
-    {{#foreach tags}}
-    	{{#if @first}}
-    		<a class="it-popular-tags-item first" title="name" href="{{ url }}" {{#if feature_image}}style="background-image:url('{{feature_image}}')"{{/if}}>
-        <h2>
-        	{{ name }}
-        	<small>{{ count.posts }} Posts</small>
-        </h2> 
-         {{#if description}}
-             <p>{{description}}</p>
-          {{/if}}
-        </a>
-    	{{else}}
-        <a class="it-popular-tags-item" title="name" href='{{ url }}'>
-        {{ name }} <span>{{ count.posts }}</span>
-        </a>
-        
-        {{/if}}
-    {{/foreach}}
+<div class="it-popular-tags it-grid-c3">
+	{{#get "tags" limit="3" include="count.posts" order="count.posts desc"}}
+        {{#foreach tags}}
+            <div class="it-popular-tags-item">
+                <div class="it-popular-tags-title">
+                     <a class="" title="{{name}}" href='{{ url }}'>
+                        {{ name }}
+                    </a>
+                </div>
+                <div class="it-tag-articles">
+                    {{#get "posts" filter="tags:{{slug}}" limit="5" include="authors,tags" as |article_teaser|}}
+                        {{#foreach article_teaser visibility="all"}}
+                            <a class="it-tag-articles-teaser" href="{{url}}">
+                                <div class="it-teaser-media">
+                                    {{#if feature_image}}
+                                        <img alt="{{title}}" src="{{feature_image}}">
+                                    {{/if}}
+                                </div>
+                                <div class="it-teaser-content">
+                                    <h3>{{title}} 
+                                        <small><time datetime="{{date format="YYYY-MM-DD"}}">{{date timeago="true"}}</time></small>
+                                    </h3>
+                                </div>
+                            </a>
+                        {{/foreach}}
+                    {{/get}}
+                </div>
+            </div>
+        {{/foreach}}
     {{/get}}
 </div>

@@ -4,7 +4,7 @@
 .it-auth-form {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto 10vmin;
+    margin: 10vmin auto 10vmin;
     text-align: center;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .it-auth-box .it-button {
-    margin-left: 10px;
+    margin-left: -10px;
 }
 
 @media (max-width: 600px) {
