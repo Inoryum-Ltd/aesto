@@ -28,6 +28,26 @@
     height: 400px;
     border-radius: 0;
 }
+@media (max-width: 767px) {
+    
+    .it-card.first, .it-card.first .it-card-link {
+        grid-column: span 1;
+    }
+    .it-card.first .it-card-content {
+        margin-left: 0;
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 1023px) and (min-width:768px){
+    .it-card.first {
+        grid-column: span 2;
+    }
+    .it-card.first .it-card-link {
+        grid-column: span 1;
+    }
+}
+
 
 /* Regular cards */
 .it-card {

@@ -76,8 +76,27 @@
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
     .it-foot-menu .nav {
         font-size: 1.6rem;
+    }
+    .it-foot-inner {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 30px;
+    }
+    .it-foot-social {
+        justify-content: space-around;
+        grid-column-start: 1;
+        margin-top: 0;
+    }
+}
+
+@media (max-width:1023px) and (min-width:768px) {
+    .it-foot-inner {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 30px;
+    }
+    .it-foot-social {
+        grid-column-start: inherit;
     }
 }

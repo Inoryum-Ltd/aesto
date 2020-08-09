@@ -265,7 +265,7 @@ html,
     align-items: center;
     margin-right: .75rem;
     background: var(--color-bg);
-    height: 4vmin;
+    height: 40px;
     padding: 0 1.5rem;
     color: currentColor;
     text-decoration: none;
