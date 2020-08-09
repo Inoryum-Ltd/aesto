@@ -19,3 +19,24 @@
     grid-template-columns: repeat(2,1fr);
   }
 }
+
+
+
+
+
+/* Two column 
+/***************************************************/
+
+.it-grid-c2 {
+	display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+@media (max-width: 767px) {
+  .it-grid-c2 {
+    grid-template-columns: repeat(1,1fr);
+  }
+}

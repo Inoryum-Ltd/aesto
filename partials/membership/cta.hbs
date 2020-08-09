@@ -1,0 +1,20 @@
+{{#has visibility="paid"}}
+	<div class="it-members-cta">
+		<h2>{{t "This post is for paying subscribers only"}}</h2>
+		{{#if @member}}
+			<p>{{t "Upgrade your account to read the post and get access to the full library of posts for paying subscribers only."}}</p>
+			<a class="btn" href="{{@site.url}}/account/">{{t "See plans"}}</a>
+			{{else}}
+			<p>{{t "Sign up now and upgrade your account to read the post and get access to the full library of posts for paying subscribers only."}}</p>
+			<a class="it-button it-button-primary" href="{{@site.url}}/signup/">{{t "Sign up now"}}</a>
+			<small class="question">{{t "Already have an account?"}} <a href="{{@site.url}}/signin/">{{t "Sign in"}}</a></small>
+		{{/if}}
+		{{else}}
+			<div class="it-members-cta">
+				<h2>{{t "This post is for subscribers only"}}</h2>
+				<p>{{t "Sign up now to read the post and get access to the full library of posts for subscribers only."}}</p>
+				<a class="it-button it-button-primary" href="{{@site.url}}/signup/">{{t "Sign up now"}}</a>
+				<small class="question">{{t "Already have an account?"}} <a href="{{@site.url}}/signin/">{{t "Sign in"}}</a></small>
+			</div>
+	</div>
+{{/has}}

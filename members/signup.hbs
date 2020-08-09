@@ -11,39 +11,36 @@
     {{else if @member}}
 
         {{!-- Logged in, not paying: Check out --}}
-        <div class="it-checkout-form">
+        <div class="it-checkout-form it-canvas">
             <h1 class="it-checkout-title">Choose your subscription</h1>
-            <p>Unlock full access to {{@site.title}} and see the entire library of members-only content & updates</p>
-            <div class="it-checkout-box">
+            <p>Unlock full access to {{@site.title}} to get premium contents & updates</p>
+            <div class="it-checkout-box it-grid-c2">
                 <div class="it-checkout-plan">
                     <header class="it-checkout-plan-header">
                         <h3>Monthly</h3>
                         <span>$</span><strong>{{@price.monthly}}</strong> / month
                     </header>
-                    <div class="it-checkout-plan-content">
-                        <ul>
-                            <li>Full access to all private posts</li>
-                            <li>Regular updates with new content</li>
-                            <li>Support independent publishing</li>
-                            <li>Simple, secure card payment</li>
-                        </ul>
-                        <a class="button primary fit" href="javascript:void(0)" data-members-plan="Monthly">Choose this plan</a>
+                    <ul class="it-checkout-plan-content">
+                        <li>Full access to all private posts</li>
+                        <li>Regular updates with new content</li>
+                        <li>Support independent publishing</li>
+                        <li>Simple, secure card payment</li>
+                    </ul>
+                    <a class="it-button it-button-primary fit" href="javascript:void(0)" data-members-plan="Monthly">Choose this plan</a>
                     </div>
-                </div>
                 <div class="it-checkout-plan">
                     <header class="it-checkout-plan-header">
                         <h3>Yearly</h3>
                         <span>$</span><strong>{{@price.yearly}}</strong> / year
                     </header>
-                    <div class="it-checkout-plan-content">
-                        <ul>
-                            <li>Full access to all private posts</li>
-                            <li>Regular updates with new content</li>
-                            <li>Support independent publishing</li>
-                            <li>Simple, secure card payment</li>
-                            <li>One easy payment instead of 12!</li>
-                        </ul>
-                        <a class="button primary fit" href="javascript:void(0)" data-members-plan="Yearly">Choose this plan</a>
+                    <ul class="it-checkout-plan-content">
+                        <li>Full access to all private posts</li>
+                        <li>Regular updates with new content</li>
+                        <li>Support independent publishing</li>
+                        <li>Simple, secure card payment</li>
+                        <li>One easy payment instead of 12!</li>
+                    </ul>
+                    <a class="it-button it-button-primary fit" href="javascript:void(0)" data-members-plan="Yearly">Choose this plan</a>
                     </div>
                 </div>
             </div>
@@ -71,5 +68,3 @@
 
     </div>
 </div>
-
-<style>.pico-cta{display:none;}</style>

@@ -139,3 +139,118 @@ form[data-members-form].success .message-success {
 form[data-members-form].error .message-error {
     display: block;
 }
+
+
+
+/* Members Visibility Label
+/* ---------------------------------------------------------- */
+.it-member-label {
+    position: absolute;
+    left: 20px;
+    bottom: 22px;
+    background: var(--color-primary);
+    display: inline-block;
+    padding: .1rem 1rem;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+
+/* Members CTA
+/* ---------------------------------------------------------- */
+.it-members-cta {
+    display: block;
+    background: var(--color-bg);
+    padding: 8vmin;
+    border-radius: 7px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-border);
+}
+.it-members-cta h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.it-members-cta p {
+    margin-bottom: 2rem;
+}
+.it-members-cta .question {
+    display: block;
+    margin-top: 2rem;
+}
+
+/* Account Page
+/* ---------------------------------------------------------- */
+.it-account-box {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.it-account-box-title {
+    margin-bottom: 2rem;
+}
+
+.it-account-box p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Checkout Page
+/* ---------------------------------------------------------- */
+.it-checkout-form {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.it-checkout-title {
+    margin-bottom: 2rem;
+}
+
+.it-checkout-box {
+    margin-top: 4rem;
+}
+.it-checkout-plan {
+    background: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+}
+.it-checkout-plan-header {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 2rem;
+}
+.it-checkout-plan-content {
+    flex-grow: 1;
+    margin-bottom: 6rem;
+}
+
+
+
+/* Plan Subscriber
+/* ---------------------------------------------------------- */
+.it-subscriber-box {
+    margin: 4rem 0 10rem;
+}
+.it-subscriber-header {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.it-subscription-title p {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.it-subscriber-details {
+    margin-bottom: 4rem;
+}
+.it-subscriber-detail {
+    background: #f6f9fe;
+    padding: 1rem 2rem;
+    border: 1px solid #e1edf4;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.it-subscriber-detail-label {
+    font-size: 1.6rem;
+}

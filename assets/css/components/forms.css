@@ -139,7 +139,7 @@
     flex: 1;
 }
 .subscribe-form-button {
-    background: #ff8c00;
+    background: var(--color-primary);
     border: 1px solid transparent;
     padding: .5rem 1rem;
     color: #fff;

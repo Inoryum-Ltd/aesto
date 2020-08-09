@@ -26,13 +26,15 @@
                 {{#if @labs.members}}
                 	{{#if @member}}
                 		<a class="account-link" href="{{@site.url}}/account/" title="{{t "Account"}}" >{{t "Account"}}</a>
-                		<a href="#signout" data-members-signout>{{t "Sign out"}}</a>
+                		<a class="sign-out" href="#signout" data-members-signout>{{t "Sign out"}}</a>
+                		
                 	{{else}}
-                		<a class="signin-link" href="{{@site.url}}/signin/" title="{{t "Signin"}}" >{{t "Signin"}}</a>
-                	    <a class="signup-link" href="{{@site.url}}/signup/" title="{{t "Signup"}}" >{{t "Signup"}}</a>
-                	    <a class="search-link" href="#searchinghost-easy" title="{{t "Search"}}" >{{> "icons/search"}}</a>
+                		<a class="signin-link" href="{{@site.url}}/signin/">{{t "Signin"}}</a>
+                	    <a class="signup-link" href="{{@site.url}}/signup/">{{t "Signup"}}</a>
+                	    
                 	{{/if}}
                 {{/if}}
+                <a class="search-link" href="#searchinghost-easy" title="{{t "Search"}}" aria-label="Search">{{> "icons/search"}}</a>
             </div>
         </div>
     </nav>

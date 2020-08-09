@@ -1,5 +1,7 @@
 <script src="{{asset "built/jquery-3.4.1.min.js"}}"></script>
 <script src="https://cdn.jsdelivr.net/gh/gmfmi/searchinghost-easy@latest/dist/searchinghost-easy-basic.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+
 
 
 {{#is "post, page"}}
@@ -55,6 +57,10 @@
             $load_posts_button.removeClass('button--loading');
 
             $('.it-postfeed').append(posts);
+            var lazyLoadInstance = new LazyLoad({
+                elements_selector: ".lazy",
+            	use_native: true
+            });
 
             pagination_next_page_number++;
 
@@ -63,6 +69,7 @@
                 $load_posts_button.attr('disabled', true);
             }
         });
+        
     });
     
      //search 
@@ -71,6 +78,11 @@
         apiUrl: api_url
     });
     
-    
+    //Lazy Load
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy",
+    	use_native: true
+    });
+    lazyLoadInstance.update();
 </script>
 

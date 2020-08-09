@@ -1,0 +1,58 @@
+{{!< default}}
+<div class="it-page">
+    <div class="it-container">
+			{{#post}}
+		    <header class="it-page-head">
+		        {{#if feature_image}}
+		            <figure class="it-feature-image-wrapper">
+		                <img class="it-feature-image" 
+		                    srcset="{{img_url feature_image size="s"}} 300w,
+		                            {{img_url feature_image size="m"}} 600w,
+		                            {{img_url feature_image size="l"}} 1000w,
+		                            {{img_url feature_image size="xl"}} 2000w"
+		                    sizes="(max-width: 1000px) 490px, 1200px"
+		                    src="{{img_url feature_image size="m"}}"
+		                    alt="{{title}}"
+		                />
+		            </figure>
+		        {{/if}}
+		        <h1 class="it-title">{{title}}</h1>
+		        {{#if custom_excerpt}}
+		            <p class="it-excerpt">{{custom_excerpt}}</p>
+		        {{/if}}
+		    </header>
+			{{/post}}
+		</div>
+		
+		<div class="it-container">
+    <div class="it-authors it-grid-c3">
+    	{{#get "authors" limit="all" include="count.posts" order="count.posts desc"}}
+        {{#foreach authors}}
+            <a class="it-authors-item" title="{{name}}" href='{{ url }}'>
+            	
+            	<figure class="it-avatar-wrapper">
+            		{{#if profile_image}}
+		                <img class="lazy" 
+		                    data-src="{{profile_image}}"
+		                    alt="{{title}}"
+		                />
+		             {{else}}
+		             	{{> "icons/user"}}
+		             {{/if}}
+		            </figure>
+                <h2 class="it-authors-title">
+                    {{ name }}
+                </h2>
+                {{#if bio}}
+                	<p>{{bio}}</p>
+                {{/if}}
+                <span>Written {{count.posts}} articles</span>
+            </a>
+        {{/foreach}}
+    {{/get}}
+        
+    </div>
+ </div>
+ 
+	</div>
+

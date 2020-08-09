@@ -32,8 +32,9 @@
     			{{/get}}
             </div>
             
-            {{#if @labs.members}}
-                <div class="it-subscribe-section">
+            
+            <div class="it-subscribe-section">
+                {{#if @labs.members}}
                 	<h4>{{t "Subscribe"}}</h4>
                 	<p>Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
                 	<div class="it-subscribe-content">
@@ -46,19 +47,20 @@
                 			<div class="message-error">An error occurred, please try again later.</div>
                 		</form>
                 	</div>
-                </div>
-            {{/if}}
+                {{/if}}
+            </div>
+            
             <div class="it-foot-meta">
                 &copy; {{date format="YYYY"}} {{@site.title}} Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
             </div>
             <div class="it-foot-social">
                 {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">{{> "icons/facebook"}}</a>
                 {{/if}}
                 {{#if @site.twitter}}
-                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">{{> "icons/twitter"}}</a>
                 {{/if}}
-                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener" aria-label="RSS">{{> "icons/rss"}}</a>
             </div>
         </div>
     </div>

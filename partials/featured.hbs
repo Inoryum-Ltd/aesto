@@ -1,58 +1,28 @@
-		{{#get "posts" limit="5" filter="featured:true" include="tags,authors"}}
-			<div class="it-hero featured">
-					{{#foreach posts}}
+		{{#get "posts" limit="4" filter="featured:true" include="tags,authors"}}
+			<div class="it-hero featured it-grid-c3">
+					{{#foreach posts visibility="all"}}
 				<article class="it-hero-inner">
-					<a class="it-link-overlay" href="{{url}}"></a>
 					{{#if feature_image}}
-						<picture class="it-feature-card-image">
-							<img srcset="{{img_url feature_image size="s"}} 300w,
+						<figure class="it-feature-card-image">
+							<img class="lazy"
+										data-srcset="{{img_url feature_image size="s"}} 300w,
                             {{img_url feature_image size="m"}} 600w,
                             {{img_url feature_image size="l"}} 1000w,
                             {{img_url feature_image size="xl"}} 2000w"
-                    sizes="(max-width: 1000px) 400px, 700px"
-                    src="{{img_url feature_image size="m"}}"
-                    alt="{{title}}"
+                    data-sizes="(max-width: 1000px) 400px, 700px"
+                    data-src="{{img_url feature_image size="m"}}"
+                    alt=""
                 />
-						</picture>
+						</figure>
 					{{/if}}
 					<div class="it-hero-contents">
-						<div class="it-card-meta">
-                {{#foreach tags limit="1"}}
-				<span class="it-post-card-tags">
-					<a href="{{url}}" title="{{title}}"><span class="it-tag-hash">&#35;</span>{{name}}</a>
-				</span>
-			{{/foreach}}
-             
-			<span class="it-post-card-by">
-			by
-			{{#has author="count:1"}}
-				{{#primary_author}}
-					<a href="{{url}}">{{name}}</a>
-				{{/primary_author}}
-			{{else}}
-			{{#has author="count:2"}}
-				{{#if authors}}
-					{{#foreach authors}}
-						<a href="{{url}}">{{name}}</a>
-						{{#if @first}}
-							{{t "&"}}
-						{{/if}}
-					{{/foreach}}
-				{{/if}}
-				{{else}}
-				{{#has author="count:>2"}}
-						{{#primary_author}}
-							<a href="{{url}}">{{name}}</a>
-							{{/primary_author}}
-							{{t "and others"}}
-				{{/has}}
-				{{/has}}
-				{{/has}}
-			<time datetime="{{date timeago="true"}}">{{date timeago="true"}}</time>
-			</span> 
-								
-			</div>
-						<h2>{{title}}</h2>
+							<div class="it-featured-post-tags">
+								{{#foreach tags}}
+										<a href="{{url}}" title="{{title}}"><span class="it-tag-hash">&#35;</span>{{name}}</a>
+								{{/foreach}}
+							</div>
+							<div class="it-feature-label">{{t "Featured"}}</div>
+							<h2><a href="{{url}}">{{title}}</a></h2>
 					</div>
 			</article>
 			{{/foreach}}

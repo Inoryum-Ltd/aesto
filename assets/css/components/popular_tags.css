@@ -1,13 +1,12 @@
 /* Popular Tags */
     .it-popular-tags {
-		    margin: 2em 0;
-		    border-radius: 7px;
+		    margin-bottom: 8vmin;
 		}
     .it-popular-tags-title a {
 		    display: block;
 		    font-size: 1.8rem;
 		    font-weight: 600;
-		    border-bottom: 1px solid #f5f6f8;
+		    border-bottom: 1px solid var(--color-border);
 		    padding-bottom: 1rem;
 		    margin-bottom: 2rem;
 		}
@@ -30,8 +29,7 @@
     .it-teaser-content h3 small {
 		    display: block;
 		    margin-top: .5rem;
-		    color: #ff8c00;
-		    font-weight: 400;
+		    color: var(--color-primary);
 		}
     .it-teaser-media {
 		    width: 100px;
