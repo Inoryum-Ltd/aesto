@@ -95,7 +95,7 @@ html,
 /* ---------------------------------------------------------- */
 
 
- .it-pagination {
+.it-pagination {
     text-align: center;
     margin-bottom: 8vmin;
 }
@@ -192,7 +192,7 @@ html,
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    margin: 4vmin 0;
+    margin: 8vmin 0;
 }
 
 .it-post-tags {
@@ -228,6 +228,14 @@ html,
     margin: 2rem 0;
 }
 
+
+.it-post-comments {
+    margin: 0 0 8vmin;
+    background: var(--color-bg);
+    padding: 4rem;
+    border-radius: 7px;
+    border: 1px solid var(--color-border);
+}
 
 /* Author Archive
 /* ---------------------------------------------------------- */

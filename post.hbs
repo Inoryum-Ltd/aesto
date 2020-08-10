@@ -1,9 +1,6 @@
 {{!< default}}
-
 {{#post}}
-
 <article class="it-article {{post_class}} {{#if feature_image}}has-feature-image{{/if}}">
-
     <header class="it-header it-canvas">
         {{#if feature_image}}
             <figure class="it-feature-image-wrapper">
@@ -12,7 +9,7 @@
                             {{img_url feature_image size="m"}} 600w,
                             {{img_url feature_image size="l"}} 1000w,
                             {{img_url feature_image size="xl"}} 2000w"
-                    data-sizes="(max-width: 1000px) 490px, 1200px"
+                    data-sizes="(max-width: 1000px) 490px, 2000px"
                     data-src="{{img_url feature_image size="m"}}"
                     alt="{{title}}"
                 />
@@ -50,12 +47,11 @@
             </span> 
             <span class="it-pipe">&#124;</span> 
             <span>{{reading_time}}</span>
-            </div>
+        </div>
         <h1 class="it-title">{{title}}</h1>
         {{#if custom_excerpt}}
         <p class="it-excerpt">{{custom_excerpt}}</p>
         {{/if}}
-        
     </header>
 
     <div class="it-content it-canvas">
@@ -73,16 +69,13 @@
 						<a href="{{url}}" title="{{title}}" class="it-button-tag">{{name}}</a>
 			    {{/foreach}}
             </div>
-            {{> "social-share"}}
-            
+            {{> "social-share"}} {{!-- partials/social-share.hbs --}}
         </div>
-
-        {{!--
-        <section class="it-post-comments">
-            If you want to embed comments, this is a good place to do it!
-        </section>
-        --}}
-
+        {{#if access}}      
+            <section class="it-post-comments">
+                {{> "disqus"}} {{!-- partials/disqus.hbs --}}
+            </section>
+        {{/if}}
     </footer>
 
 </article>

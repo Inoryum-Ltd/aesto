@@ -66,3 +66,24 @@
 .it-button.it-button-primary:hover {
     background-color: color(var(--color-primary) l(-10%));
 }
+
+.it-button.it-button-secondary {
+    color: #fff !important;
+    background-color: var(--color-success);
+    box-shadow: none;
+}
+
+.it-button.it-button-secondary:hover {
+    background-color: color(var(--color-success) l(-10%));
+}
+
+.it-button.it-button-danger {
+    color: #fff !important;
+    background-color: var(--color-danger);
+    box-shadow: none;
+}
+
+.it-button.it-button-danger:hover {
+    background-color: color(var(--color-danger) l(-10%));
+}
+

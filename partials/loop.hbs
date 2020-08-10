@@ -17,45 +17,43 @@ Re-usable card for linking to posts
                 />
             </figure>
             {{/if}}
-            {{> "membership/visibility-label"}}
+            {{> "membership/visibility-label"}} {{!-- partials/membership/visibility-label.hbs --}}
         </a>
         <div class="it-card-content">
             <div class="it-card-meta">
-             
-			<span class="it-post-card-by">
-			by
-			{{#has author="count:1"}}
-				{{#primary_author}}
-					<a href="{{url}}">{{name}}</a>
-				{{/primary_author}}
-			{{else}}
-			{{#has author="count:2"}}
-				{{#if authors}}
-					{{#foreach authors}}
-						<a href="{{url}}">{{name}}</a>
-						{{#if @first}}
-							{{t "&"}}
-						{{/if}}
-					{{/foreach}}
-				{{/if}}
-				{{else}}
-				{{#has author="count:>2"}}
+	            <span class="it-post-card-by">
+					by
+					{{#has author="count:1"}}
 						{{#primary_author}}
 							<a href="{{url}}">{{name}}</a>
-							{{/primary_author}}
-							{{t "and others"}}
-				{{/has}}
-				{{/has}}
-				{{/has}}
-			<time datetime="{{date format="YYYY-MM-DD"}}">{{date timeago="true"}}</time>
-			</span> 
+						{{/primary_author}}
+					{{else}}
+					{{#has author="count:2"}}
+						{{#if authors}}
+							{{#foreach authors}}
+								<a href="{{url}}">{{name}}</a>
+								{{#if @first}}
+									{{t "&"}}
+								{{/if}}
+							{{/foreach}}
+						{{/if}}
+						{{else}}
+						{{#has author="count:>2"}}
+								{{#primary_author}}
+									<a href="{{url}}">{{name}}</a>
+									{{/primary_author}}
+									{{t "and others"}}
+						{{/has}}
+						{{/has}}
+						{{/has}}
+					<time datetime="{{date format="YYYY-MM-DD"}}">{{date timeago="true"}}</time>
+				</span> 
 			
-			{{#foreach tags limit="1"}}
-					<span class="it-post-card-tags">
-						<a href="{{url}}" title="{{title}}"><span class="it-tag-hash">&#35;</span>{{name}}</a>
-					</span>
-			{{/foreach}}
-								
+				{{#foreach tags limit="1"}}
+						<span class="it-post-card-tags">
+							<a href="{{url}}" title="{{title}}"><span class="it-tag-hash">&#35;</span>{{name}}</a>
+						</span>
+				{{/foreach}}
 			</div>
             <a class="it-card-link" href="{{url}}">
                 <h2 class="it-card-title">{{title}}</h2>

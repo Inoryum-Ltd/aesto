@@ -1,8 +1,8 @@
 {{!< default}}
 <div class="it-page">
     <div class="it-container">
-			{{#post}}
-		    <header class="it-page-head">
+		{{#post}}
+			<header class="it-page-head">
 		        {{#if feature_image}}
 		            <figure class="it-feature-image-wrapper">
 		                <img class="it-feature-image" 
@@ -10,35 +10,33 @@
 		                            {{img_url feature_image size="m"}} 600w,
 		                            {{img_url feature_image size="l"}} 1000w,
 		                            {{img_url feature_image size="xl"}} 2000w"
-		                    sizes="(max-width: 1000px) 490px, 1200px"
+		                    sizes="(max-width: 1000px) 490px, 2000px"
 		                    src="{{img_url feature_image size="m"}}"
 		                    alt="{{title}}"
 		                />
 		            </figure>
 		        {{/if}}
-		        <h1 class="it-title">{{title}}</h1>
+		    	<h1 class="it-title">{{title}}</h1>
 		        {{#if custom_excerpt}}
 		            <p class="it-excerpt">{{custom_excerpt}}</p>
 		        {{/if}}
 		    </header>
-			{{/post}}
-		</div>
-		
-		<div class="it-container">
-    <div class="it-tags it-grid-c3">
-    	{{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
-        {{#foreach tags}}
-            <a class="it-tags-item" title="{{name}}" href='{{ url }}'>
-                <h2 class="it-tags-title">
-                    {{ name }}
-                </h2>
-                <span>{{count.posts}} Articles</span>
-            </a>
-        {{/foreach}}
-    {{/get}}
-        
-    </div>
- </div>
- 
+		{{/post}}
 	</div>
+		
+	<div class="it-container">
+	    <div class="it-tags it-grid-c3">
+	    	{{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
+		        {{#foreach tags}}
+		            <a class="it-tags-item" title="{{name}}" href='{{ url }}'>
+		                <h2 class="it-tags-title">
+		                    {{ name }}
+		                </h2>
+		                <span>{{count.posts}} Articles</span>
+		            </a>
+		        {{/foreach}}
+		    {{/get}}
+	    </div>
+	</div>
+</div>
 

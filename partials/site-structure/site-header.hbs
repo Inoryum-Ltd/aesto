@@ -1,6 +1,5 @@
 <header id="it-head" class="it-head">
     <nav class="it-head-inner it-container">
-
         <div class="it-head-brand">
             <h1>
                 <a class="it-head-logo" href="{{@site.url}}">
@@ -16,7 +15,6 @@
                     <div class="it-burger-inner"></div>
                 </div>
             </a>
-            
         </div>
         <div class="it-head-menu">
             {{navigation}}
@@ -27,11 +25,9 @@
                 	{{#if @member}}
                 		<a class="account-link" href="{{@site.url}}/account/" title="{{t "Account"}}" >{{t "Account"}}</a>
                 		<a class="sign-out" href="#signout" data-members-signout>{{t "Sign out"}}</a>
-                		
                 	{{else}}
                 		<a class="signin-link" href="{{@site.url}}/signin/">{{t "Signin"}}</a>
                 	    <a class="signup-link" href="{{@site.url}}/signup/">{{t "Signup"}}</a>
-                	    
                 	{{/if}}
                 {{/if}}
                 <a class="search-link" href="#searchinghost-easy" title="{{t "Search"}}" aria-label="Search">{{> "icons/search"}}</a>

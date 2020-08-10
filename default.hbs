@@ -11,7 +11,8 @@
         
         <script>
             var pagination_next_page_number       = '{{ pagination.next }}',
-                pagination_available_pages_number = '{{ pagination.pages }}';
+                pagination_available_pages_number = '{{ pagination.pages }}',
+                api_url = '{{@site.url}}';
         </script>
     
         {{ghost_head}}
@@ -27,6 +28,7 @@
             </main>
             {{> "site-structure/site-footer"}}
         </div>
+        {{> "membership/notifications"}} 
         {{> "site-structure/site-scripts"}} 
         {{ghost_foot}} {{!-- Outputs important scripts - should always be included before closing body tag --}}
     </body>

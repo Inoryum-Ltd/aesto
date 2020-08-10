@@ -2,7 +2,6 @@
 
 {{#post}}
 <article class="it-article {{post_class}}">
-
     <header class="it-header it-canvas">
         {{#if feature_image}}
             <figure class="it-feature-image-wrapper">
@@ -11,7 +10,7 @@
                             {{img_url feature_image size="m"}} 600w,
                             {{img_url feature_image size="l"}} 1000w,
                             {{img_url feature_image size="xl"}} 2000w"
-                    sizes="(max-width: 1000px) 490px, 1200px"
+                    sizes="(max-width: 1000px) 490px, 2000px"
                     src="{{img_url feature_image size="m"}}"
                     alt="{{title}}"
                 />
@@ -22,10 +21,8 @@
             <p class="it-excerpt">{{custom_excerpt}}</p>
         {{/if}}
     </header>
-
     <div class="it-content it-canvas">
         {{content}}
     </div>
-
 </article>
 {{/post}}

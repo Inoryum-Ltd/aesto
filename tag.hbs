@@ -2,39 +2,34 @@
 
 <div class="it-page">
     <div class="it-container">
-
         {{#tag}}
-        <header class="it-header it-canvas">
-        	{{#if feature_image}}
-	            <figure class="it-feature-image-wrapper">
-	                <img class="it-feature-image" 
-	                    srcset="{{img_url feature_image size="s"}} 300w,
-	                            {{img_url feature_image size="m"}} 600w,
-	                            {{img_url feature_image size="l"}} 1000w,
-	                            {{img_url feature_image size="xl"}} 2000w"
-	                    sizes="(max-width: 1000px) 490px, 1200px"
-	                    src="{{img_url feature_image size="m"}}"
-	                    alt="{{title}}"
-	                />
-	            </figure>
-	        {{/if}}
-	       <h1 class="it-title">{{name}}</h1>
-
-            <p class="it-excerpt">
-                {{#if description}}
-                    {{description}}
-                {{else}}
-                    A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
-                {{/if}}
-            </p>
-        </header>
+            <header class="it-header it-canvas">
+            	{{#if feature_image}}
+    	            <figure class="it-feature-image-wrapper">
+    	                <img class="it-feature-image" 
+    	                    srcset="{{img_url feature_image size="s"}} 300w,
+    	                            {{img_url feature_image size="m"}} 600w,
+    	                            {{img_url feature_image size="l"}} 1000w,
+    	                            {{img_url feature_image size="xl"}} 2000w"
+    	                    sizes="(max-width: 1000px) 490px, 2000px"
+    	                    src="{{img_url feature_image size="m"}}"
+    	                    alt="{{title}}"
+    	                />
+    	            </figure>
+    	        {{/if}}
+    	       <h1 class="it-title">{{name}}</h1>
+                <p class="it-excerpt">
+                    {{#if description}}
+                        {{description}}
+                    {{else}}
+                        A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+                    {{/if}}
+                </p>
+            </header>
         {{/tag}}
-
         <div class="it-postfeed it-grid-c3">
             {{> "loop"}} {{!-- partials/loop.hbs --}}
         </div>
-        
         {{pagination}} {{!-- partials/pagination.hbs --}}
-
     </div>
 </div>

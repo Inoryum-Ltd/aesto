@@ -78,5 +78,6 @@
                 "width": 2000
             }
         }
-    }
+    },
+    "dependencies": {}
 }

@@ -194,6 +194,15 @@ form[data-members-form].error .message-error {
     font-size: 2rem;
     margin-bottom: 3rem;
 }
+.it-subscription-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.it-subscription-actions li:nth-child(2) {
+    margin-top: 0 !important;
+    margin-left: 2rem;
+}
 
 /* Checkout Page
 /* ---------------------------------------------------------- */
@@ -226,7 +235,6 @@ form[data-members-form].error .message-error {
 }
 
 
-
 /* Plan Subscriber
 /* ---------------------------------------------------------- */
 .it-subscriber-box {
@@ -253,4 +261,47 @@ form[data-members-form].error .message-error {
 
 .it-subscriber-detail-label {
     font-size: 1.6rem;
+}
+
+
+
+/* Notifications for memebership Feature */
+.it-notification {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9000;
+    padding: 20px;
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.3em;
+    font-weight: 500;
+    text-align: center;
+    background: var(--color-success);
+    -webkit-transition: all .35s cubic-bezier(.19,1,.22,1) .5s;
+    transition: all .35s cubic-bezier(.19,1,.22,1) .5s;
+    -webkit-transform: translateY(-175%);
+    transform: translateY(-175%);
+}
+.it-notification-close svg {
+    width: 14px;
+    height: 14px;
+    fill: #fff;
+    position: absolute;
+    right: 15vmin;
+    top: 10px;
+}
+
+.billing-cancel .billing-update-cancel, .billing-success .billing-update, .checkout-success .checkout, .signin-success .signin, .signup-success .signup, .subscribe-success .subscribe {
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.it-notification.billing-update-cancel {
+    background: var(--color-danger);
+}
+.it-notification.closed {
+    visibility: hidden;
 }

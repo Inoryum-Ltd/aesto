@@ -1,29 +1,28 @@
 {{!-- Post/Page share icons --}}
 <div class="it-social-share">
-    
     {{!-- facebook --}}
     <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute='true'}}" rel="external"
-        target="_blank" class="icon-facebook">
+        target="_blank" class="icon-facebook" aria-label="Facebook">
         {{> icons/facebook}}
     </a>
     {{!-- twitter --}}
     <a href="http://twitter.com/share?text={{encode title}}&amp;url={{url absolute='true'}}" rel="external"
-        target="_blank" class="icon-twitter">
+        target="_blank" class="icon-twitter" aria-label="Twitter">
          {{> icons/twitter}}
     </a>
     {{!-- whatsapp --}}
     <a href="whatsapp://send?text={{url absolute='true'}}" data-action="share/whatsapp/share" rel="external"
-        target="_blank" class="icon-whatsapp">
+        target="_blank" class="icon-whatsapp" aria-label="Whatsapp">
          {{> icons/whatsapp}}
     </a>
     {{!-- Linkedin --}}
     <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url}}/&amp;title={{encode title}}" rel="external"
-        target="_blank" class="icon-linkedin">
+        target="_blank" class="icon-linkedin" aria-label="Linkedin">
          {{> icons/linkedin}}
     </a>
     {{!-- email --}}
     <a href="mailto:?subject={{encode title}}&amp;body=Article:%20{{url absolute='true'}}"
-        class="icon-email">
+        class="icon-email" aria-label="Email">
         {{> icons/email}}
     </a>
 </div>
