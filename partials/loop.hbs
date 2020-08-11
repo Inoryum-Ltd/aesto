@@ -3,7 +3,7 @@ Re-usable card for linking to posts
 --}}
 {{#foreach posts visibility='all'}}
     <article class="it-card {{post_class}} {{#if @first}}first it-grid-c3{{/if}}">
-        <a class="it-card-link" href="{{url}}">
+        <a class="it-card-link" href="{{url}}" title="{{title}}">
             {{#if feature_image}}
             <figure class="it-card-image-wrapper">
                 <img class="it-card-image lazy"
@@ -27,7 +27,7 @@ Re-usable card for linking to posts
         <div class="it-card-content">
             <div class="it-card-meta">
 	            <span class="it-post-card-by">
-					by
+					{{t "by"}}
 					{{#has author="count:1"}}
 						{{#primary_author}}
 							<a href="{{url}}">{{name}}</a>

@@ -36,31 +36,31 @@
             <div class="it-subscribe-section">
                 {{#if @labs.members}}
                 	<h4>{{t "Subscribe"}}</h4>
-                	<p>Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+                	<p>{{t "Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox"}}</p>
                 	<div class="it-subscribe-content">
                 		<form data-members-form="subscribe" class="subscribe-form">
                 			<div class="input-wrapper">
                 				<input type="email" class="subscribe-form-input" placeholder="{{t "Email"}}" aria-label="{{t "Email"}}" data-members-email="">
-                				<button type="submit" class="subscribe-form-button">Subscribe</button>
+                				<button type="submit" class="subscribe-form-button">{{t "Subscribe"}}</button>
                 			</div>
-                			<div class="message-success">Please check your inbox and click the link to confirm your subscription.</div>
-                			<div class="message-error">An error occurred, please try again later.</div>
+                			<div class="message-success">{{t "Please check your inbox and click the link to confirm your subscription."}}</div>
+                			<div class="message-error">{{t "An error occurred, please try again later."}}</div>
                 		</form>
                 	</div>
                 {{/if}}
             </div>
             
             <div class="it-foot-meta">
-                &copy; {{date format="YYYY"}} {{@site.title}} Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                &copy; {{date format="YYYY"}} {{@site.title}} {{{t "Published with {ghostlink}" ghostlink="<a href=\"https://ghost.org\">Ghost</a>"}}} 
             </div>
             <div class="it-foot-social">
                 {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">{{> "icons/facebook"}}</a>
+                <a href="{{facebook_url @site.facebook}}" title="{{t "Facebook"}}" target="_blank" rel="noopener" aria-label="{{t "Facebook"}}">{{> "icons/facebook"}}</a>
                 {{/if}}
                 {{#if @site.twitter}}
-                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">{{> "icons/twitter"}}</a>
+                <a href="{{twitter_url @site.twitter}}" title="{{t "Twitter"}}" target="_blank" rel="noopener" aria-label="{{t "Twitter"}}">{{> "icons/twitter"}}</a>
                 {{/if}}
-                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener" aria-label="RSS">{{> "icons/rss"}}</a>
+                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="{{t "RSS"}}" target="_blank" rel="noopener" aria-label="{{t "RSS"}}">{{> "icons/rss"}}</a>
             </div>
         </div>
     </div>

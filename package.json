@@ -1,6 +1,6 @@
 {
     "name": "aesto",
-    "description": "Clean responsive theme for ghost",
+    "description": "Minimalistic Blog & Magazine theme for ghost",
     "demo": "https://aesto.inoryum.com",
     "version": "1.0.0",
     "engines": {
@@ -8,20 +8,16 @@
         "ghost-api": "v3"
     },
     "license": "MIT",
-    "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg"
-    },
     "scripts": {
         "dev": "gulp",
         "zip": "gulp zip",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "gulp build",
-        "preship": "yarn test",
-        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
+        "preship": "yarn test"
     },
     "author": {
-        "name": "Inoryum Ltd",
+        "name": "Inoryum Themes",
         "email": "hello@inoryum.com",
         "url": "https://inoryum.com"
     },
@@ -35,7 +31,8 @@
     "keywords": [
         "ghost",
         "theme",
-        "ghost-theme"
+        "blog",
+        "magazine"
     ],
     "devDependencies": {
         "autoprefixer": "9.7.6",
@@ -48,7 +45,7 @@
         "gulp-uglify": "3.0.2",
         "gulp-util": "3.0.8",
         "gulp-watch": "5.0.1",
-        "gulp-zip": "5.0.1",
+        "gulp-zip": "5.0.2",
         "postcss-color-function": "4.1.0",
         "postcss-custom-properties": "9.1.1",
         "postcss-easy-import": "3.0.0"

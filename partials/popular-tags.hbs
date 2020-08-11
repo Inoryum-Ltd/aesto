@@ -10,7 +10,7 @@
                 <div class="it-tag-articles">
                     {{#get "posts" filter="tags:{{slug}}" limit="5" include="authors,tags" as |article_teaser|}}
                         {{#foreach article_teaser visibility="all"}}
-                            <a class="it-tag-articles-teaser" href="{{url}}">
+                            <a class="it-tag-articles-teaser" title="{{title}}" href="{{url}}">
                                 <div class="it-teaser-media">
                                     {{#if feature_image}}
                                         <img class="lazy" alt="" data-src="{{feature_image}}">

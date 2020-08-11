@@ -6,17 +6,17 @@
         <section class="it-error-content">
             <h1 class="it-error-code">{{statusCode}}</h1>
             <p class="it-error-description">{{message}}</p>
-            <p class="it-error-link"><a href="{{@site.url}}">Go to the front page →</a></p>
+            <p class="it-error-link"><a href="{{@site.url}}">{{t "Go to the front page →"}}</a></p>
             {{#if errorDetails}}
             <section class="it-error-stack">
-                <h4>Theme errors:</h4>
+                <h4>{{t "Theme errors:"}}</h4>
                 <ul class="it-error-stack-list">
                     {{#foreach errorDetails}}
                     <li>
                         <h5 class="it-error-stack-function">{{{rule}}}</h5>
                         {{#foreach failures}}
-                        <span class="it-error-stack-file"><strong>Ref:</strong> {{ref}}</span><br>
-                        <span class="it-error-stack-file"><strong>Message:</strong> {{message}}</span>
+                        <span class="it-error-stack-file"><strong>{{t "Ref:"}}</strong> {{ref}}</span><br>
+                        <span class="it-error-stack-file"><strong>{{t "Message:"}}</strong> {{message}}</span>
                         {{/foreach}}
                     </li>
                     {{/foreach}}
