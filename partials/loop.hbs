@@ -17,6 +17,11 @@ Re-usable card for linking to posts
                 />
             </figure>
             {{/if}}
+            {{#if featured}}
+            	<span class="it-feature-label">
+            		{{> "icons/star"}} {{!-- partials/icons/star.hbs --}}
+            	</span>
+            {{/if}}
             {{> "membership/visibility-label"}} {{!-- partials/membership/visibility-label.hbs --}}
         </a>
         <div class="it-card-content">

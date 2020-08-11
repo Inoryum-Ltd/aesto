@@ -71,7 +71,7 @@
 }
 
 .it-head-menu .nav-current a {
-    box-shadow: 0 -1px 0 0 currentcolor inset;
+    box-shadow: 0 -1px 0 0 var(--color-primary) inset;
 }
 
 
@@ -97,6 +97,13 @@
     display: inline-block;
     margin: 0 0 0 1.5vw;
     padding: 5px 0;
+}
+.signup-link {
+    color: #fff !important;
+    background: var(--color-primary);
+    padding: 5px 15px !important;
+    border-radius: .5rem;
+    font-size: 1.4rem;
 }
 
 

@@ -87,11 +87,20 @@
     font-weight: 500;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
     .it-readmore {
         font-size: 1.6rem;
     }
     .it-readmore svg {
         margin: 0.1em 0 0;
+    }
+    .it-readmore-inner {
+        padding: 0;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width:1023px) and (min-width:768px) {
+    .it-readmore-inner {
+        padding: 0;
     }
 }

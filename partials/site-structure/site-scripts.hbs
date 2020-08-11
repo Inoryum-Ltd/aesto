@@ -49,13 +49,13 @@
         url: request_next_link,
         beforeSend: function() {
             $load_posts_button.text('Loading');
-            $load_posts_button.addClass('button--loading');
+            $load_posts_button.addClass('loading');
         }
         }).done(function(data) {
             var posts = $('.post', data);
 
             $load_posts_button.text('Load More');
-            $load_posts_button.removeClass('button--loading');
+            $load_posts_button.removeClass('loading');
 
             $('.it-postfeed').append(posts);
             var lazyLoadInstance = new LazyLoad({
