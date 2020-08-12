@@ -53,7 +53,7 @@
 	"Premium": "Premium",
 	"Members": "Members",
 	"Subscribe": "Subscribe",
-	"Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox": "Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox",
+	"Stay up to date! Get all the latest & greatest posts delivered straight to your inbox": "Stay up to date! Get all the latest & greatest posts delivered straight to your inbox",
 	"Please check your inbox and click the link to confirm your subscription.": "Please check your inbox and click the link to confirm your subscription.",
 	"An error occurred, please try again later.": "An error occurred, please try again later.",
 	"Published with {ghostlink}": "Published with {ghostlink}",
@@ -81,5 +81,8 @@
 	"Message:": "Message:",
 	"Previous Post": "Previous Post",
 	"Next Post": "Next Post",
-	"A collection of": "A collection of"
+	"A collection of": "A collection of",
+	"Written": "Written",
+	"Tags": "Tags",
+	"Links": "Links"
 }
