@@ -1,6 +1,6 @@
-# Ghost Starter Theme
+# aEsto - minimalist Blog & Magazin theme for Ghost
 
-A starter framework for Ghost themes! Fork this repository and start your development here with all the main things you need to develop a custom Ghost theme.
+A simple lightwight theme for your Ghost publication with ghost membership feature.
 
 &nbsp;
 

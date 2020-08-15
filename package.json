@@ -7,7 +7,6 @@
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
     },
-    "license": "MIT",
     "scripts": {
         "dev": "gulp",
         "zip": "gulp zip",

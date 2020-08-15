@@ -121,12 +121,14 @@
 .it-content blockquote {
     position: relative;
     font-style: italic;
+    background: var(--color-bg);
+    padding: 2em;
 }
 
 .it-content blockquote::before {
     content: "";
     position: absolute;
-    left: -1.5em;
+    left: 0;
     top: 0;
     bottom: 0;
     width: 0.3rem;
@@ -198,6 +200,9 @@
     align-items: center;
     width: 100%;
 }
+.kg-embed-card iframe {
+    width: 100% !important;
+}
 
 .kg-image-card img {
     margin: auto;
@@ -264,6 +269,7 @@
     flex-grow: 999;
     padding: 20px;
     order: 1;
+    background: var(--color-bg);
 }
 
 .kg-bookmark-title {
@@ -310,6 +316,7 @@
     display: inline-block;
     width: 16px;
     height: 16px;
+    margin-right: 10px;
 }
 
 .kg-bookmark-thumbnail {
@@ -330,11 +337,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-}
-
-.kg-bookmark-publisher::before {
-    content: "•";
-    margin: 0 .5em;
+    margin-right: 10px;
 }
 
 

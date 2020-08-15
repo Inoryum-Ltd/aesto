@@ -241,9 +241,9 @@ html,
 /* ---------------------------------------------------------- */
 
 .it-author-image {
-    height: 8vmin;
-    width: 8vmin;
-    margin: -4rem 0 2rem 0;
+    height: 100px;
+    width: 100px;
+    margin: 2rem 0;
     border-radius: 50%;
     overflow: hidden;
     -o-object-fit: cover;
