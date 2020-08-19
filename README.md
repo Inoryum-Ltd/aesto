@@ -92,4 +92,4 @@ yarn zip
 
 # Copyright & License
 
-Copyright (c) 2020 Ghost Inoryum Ltd - Released under the [MIT license](LICENSE).
+Copyright (c) 2020 Inoryum Ltd - Released under the [MIT license](LICENSE).
