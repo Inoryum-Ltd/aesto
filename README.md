@@ -1,4 +1,4 @@
-# aEsto - minimalist Blog & Magazin theme for Ghost
+# aEsto - Minimalist Blog & Magazine theme for Ghost
 
 Aesto is a Ghost theme with clean & content focused design. The theme is fully responsive so it fits at any screen sizes. Aesto supports Ghost membership feature so that you can turn your audience in to business. This theme is suitable for personal & professional blog or for your multi author magazine.
 
