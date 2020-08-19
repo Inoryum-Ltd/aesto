@@ -1,14 +1,15 @@
 # aEsto - minimalist Blog & Magazin theme for Ghost
 
----
-
 A simple lightwight free theme for your Ghost publication with ghost membership feature.
 
+<center>
 ![Aesto Preview](https://res.cloudinary.com/inoryum/image/upload/v1597863113/ghost-documents/git_preview_e3wgxr.jpg)
+</center>
 
 [Demo](https://aesto.inoryum.com) - [Documantation](https://inoryum.com/docs/aesto) 
 
----
+
+
 
 # Theme features
 
@@ -27,7 +28,7 @@ A simple lightwight free theme for your Ghost publication with ghost membership 
 *   Responsive videos
 *   Developer friendly
 
-* * *
+
 
 # Ghost core features
 
@@ -59,16 +60,16 @@ A simple lightwight free theme for your Ghost publication with ghost membership 
 *   Responsive YouTube, Vimeo, SoundCloud, Spotify, twitter, Instagram and all other embed
 *   Previous and next post link in single post view
 
-* * *
 
-## Credits
+
+# Credits
 
 *   Images by [Unsplash](https://unsplash.com/)
 *   [jQuery](https://jquery.com/)
 *   Search Engine by [SearchinGhostEasy](https://github.com/gmfmi/searchinghost-easy)
 *   [FitVids](http://fitvidsjs.com/)
 
-* * *
+
 
 
 # Development
@@ -91,7 +92,7 @@ The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which
 yarn zip
 ```
 
----
+
 
 # Copyright & License
 
