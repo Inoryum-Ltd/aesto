@@ -16,7 +16,7 @@ Aesto is a Ghost theme with clean & content focused design. The theme is fully r
 *   Lazy Loading for images
 *   SVG icons are used
 *   Well structured & commented codes
-*   Highly to customize
+*   Easy to customize
 *   Instant Search
 *   Disqus comments integrated
 *   Custom Template for Tags & Authors pages
