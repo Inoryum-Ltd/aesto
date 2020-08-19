@@ -20,5 +20,7 @@ package-lock.json
 projectFilesBackup
 
 .DS_Store
+yarn.lock
+yarn-error.log
 
 dist/
