@@ -143,10 +143,6 @@
     .it-canvas p {
         font-size: 1.8rem;
     }
-
-    .it-content blockquote::before {
-        left: -4vw;
-    }
 }
 
 

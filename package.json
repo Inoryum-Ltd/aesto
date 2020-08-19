@@ -1,6 +1,6 @@
 {
     "name": "aesto",
-    "description": "Minimalistic Blog & Magazine theme for ghost",
+    "description": "Minimalist blog & magazine theme for ghost",
     "demo": "https://aesto.inoryum.com",
     "version": "1.0.0",
     "engines": {
@@ -28,7 +28,7 @@
         ]
     },
     "keywords": [
-        "ghost",
+        "ghost-theme",
         "theme",
         "blog",
         "magazine"
