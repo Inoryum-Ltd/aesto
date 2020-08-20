@@ -2,7 +2,7 @@
 
 Aesto is a Ghost theme with clean & content focused design. The theme is fully responsive so it fits at any screen sizes. Aesto supports Ghost membership feature so that you can turn your audience in to business. This theme is suitable for personal & professional blog or for your multi author magazine.
 
-[Demo](https://aesto.inoryum.com) - [Download](https://gitlab.com/inoryum/aesto/-/archive/v1.0.0/aesto-v1.0.0.zip) - [Documentation](https://inoryum.com/docs/aesto) 
+[Demo](https://aesto.inoryum.com) - [Download](https://gitlab.com/inoryum/aesto/-/archive/v1.0.1/aesto-v1.0.1.zip) - [Documentation](https://inoryum.com/docs/aesto) 
 
 
 
