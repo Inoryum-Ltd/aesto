@@ -17,7 +17,7 @@
     	                />
     	            </figure>
     	        {{/if}}
-    	       <h1 class="it-title">{{name}}</h1>
+    	       <h1 class="it-title" {{#if accent_color}}style="color: {{accent_color}};"{{/if}}>{{name}}</h1>
                 <p class="it-excerpt">
                     {{#if description}}
                         {{description}}

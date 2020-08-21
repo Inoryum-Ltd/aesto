@@ -29,7 +29,7 @@
 	    	{{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
 		        {{#foreach tags}}
 		            <a class="it-tags-item" title="{{name}}" href='{{ url }}'>
-		                <h2 class="it-tags-title">
+		                <h2 class="it-tags-title" {{#if accent_color}}style="color: {{accent_color}};"{{/if}}>
 		                    {{ name }}
 		                </h2>
 		                <span>{{count.posts}} {{t "Articles"}}</span>

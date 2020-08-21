@@ -48,6 +48,7 @@ Aesto is a Ghost theme with clean & content focused design. The theme is fully r
 *   Feature Icon for Featured post
 *   Social links & icons
 *   Tag archive
+*   Tag Accent Color in tag show page & custom tag list page
 *   Author archive
 *   Read time
 *   Multiple author support for post
