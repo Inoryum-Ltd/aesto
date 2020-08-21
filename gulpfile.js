@@ -1,4 +1,5 @@
 const {series, watch, src, dest, parallel} = require('gulp');
+const concat = require('gulp-concat')
 const pump = require('pump');
 
 // gulp plugins and utils
@@ -47,6 +48,7 @@ function css(done) {
 
     pump([
         src('assets/css/*.css', {sourcemaps: true}),
+        concat('app.min.css'),
         postcss(processors),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
@@ -56,6 +58,7 @@ function css(done) {
 function js(done) {
     pump([
         src('assets/js/*.js', {sourcemaps: true}),
+        concat('app.min.js'),
         uglify(),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()

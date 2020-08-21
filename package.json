@@ -75,5 +75,7 @@
             }
         }
     },
-    "dependencies": {}
+    "dependencies": {
+        "gulp-concat": "^2.6.1"
+    }
 }
