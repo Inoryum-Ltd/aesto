@@ -65,6 +65,7 @@ Aesto is a Ghost theme with clean & content focused design. The theme is fully r
 *   [jQuery](https://jquery.com/)
 *   Search Engine by [SearchinGhostEasy](https://github.com/gmfmi/searchinghost-easy)
 *   [FitVids](http://fitvidsjs.com/)
+*   Built on top of [Ghost Starter Theme](https://github.com/TryGhost/Starter)
 
 
 
