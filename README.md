@@ -57,7 +57,9 @@ Aesto is a Ghost theme with clean & content focused design. The theme is fully r
 *   Responsive YouTube, Vimeo, SoundCloud, Spotify, twitter, Instagram and all other embed
 *   Previous and next post link in single post view
 
+# Documentation 
 
+For Documentation Checkout the Link [Here](https://inoryum.com/docs/aesto)
 
 # Credits
 
