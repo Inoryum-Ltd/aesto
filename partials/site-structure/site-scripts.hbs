@@ -31,6 +31,13 @@
         $('.it-burger').click(function () {
             $('body').toggleClass('it-head-open');
         });
+        
+        //Images Zoom
+        
+        $('.kg-image-card img').attr('data-action', 'zoom');
+        // If the image is inside a link, remove zoom
+        $('.kg-image-card a img').removeAttr('data-action');
+        
     });
     
     
