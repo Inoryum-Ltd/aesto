@@ -1,10 +1,12 @@
 const {series, watch, src, dest, parallel} = require('gulp');
-const concat = require('gulp-concat')
+//const sass = require('gulp-sass');
+const concat = require('gulp-concat');
 const pump = require('pump');
 
 // gulp plugins and utils
 var livereload = require('gulp-livereload');
 var postcss = require('gulp-postcss');
+var sass = require('gulp-sass');
 var zip = require('gulp-zip');
 var uglify = require('gulp-uglify');
 var beeper = require('beeper');
@@ -47,7 +49,7 @@ function css(done) {
     ];
 
     pump([
-        src('assets/css/*.css', {sourcemaps: true}),
+        src('assets/scss/*.scss', {sourcemaps: true}),
         concat('app.min.css'),
         postcss(processors),
         dest('assets/built/', {sourcemaps: '.'}),
@@ -82,7 +84,7 @@ function zipper(done) {
     ], handleError(done));
 }
 
-const cssWatcher = () => watch('assets/css/**', css);
+const cssWatcher = () => watch('assets/scss/**', css);
 const jsWatcher = () => watch('assets/js**', js);
 const hbsWatcher = () => watch(['*.hbs', '**/**/*.hbs', '!node_modules/**/*.hbs'], hbs);
 const watcher = parallel(cssWatcher, hbsWatcher, jsWatcher);

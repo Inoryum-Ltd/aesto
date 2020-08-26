@@ -38,6 +38,7 @@
         "cssnano": "4.1.10",
         "gscan": "3.5.4",
         "gulp": "4.0.2",
+        "gulp-concat": "^2.6.1",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "8.0.0",
         "gulp-sourcemaps": "2.6.5",
@@ -47,7 +48,8 @@
         "gulp-zip": "5.0.2",
         "postcss-color-function": "4.1.0",
         "postcss-custom-properties": "9.1.1",
-        "postcss-easy-import": "3.0.0"
+        "postcss-easy-import": "3.0.0",
+        "gulp-sass": "^4.1.0"
     },
     "browserslist": [
         "defaults"
@@ -74,8 +76,5 @@
                 "width": 2000
             }
         }
-    },
-    "dependencies": {
-        "gulp-concat": "^2.6.1"
     }
 }

@@ -9,23 +9,23 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* ---------------------------------------------------------- */
 
 /* Base components */
-@import "vars.css";
-@import "components/global.css";
-@import "components/forms.css";
-@import "components/buttons.css";
-@import "components/popular_tags.css";
-@import "components/search.css";
-@import "components/card.css";
+@import "vars.scss";
+@import "components/global.scss";
+@import "components/forms.scss";
+@import "components/buttons.scss";
+@import "components/popular_tags.scss";
+@import "components/search.scss";
+@import "components/card.scss";
 
 /* Ghost components */
-@import "layouts/header.css";
-@import "layouts/content.css";
-@import "layouts/readmore.css";
-@import "layouts/members.css";
-@import "layouts/errors.css";
-@import "layouts/footer.css";
-@import "layouts/badge.css";
-@import "layouts/grid.css";
+@import "layouts/header.scss";
+@import "layouts/content.scss";
+@import "layouts/readmore.scss";
+@import "layouts/members.scss";
+@import "layouts/errors.scss";
+@import "layouts/footer.scss";
+@import "layouts/badge.scss";
+@import "layouts/grid.scss";
 
 
 
@@ -38,7 +38,7 @@ html,
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #fff;
+    background: var(--color-bg-white);
 }
 
 .it-main {
