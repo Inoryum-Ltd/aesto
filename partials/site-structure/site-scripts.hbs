@@ -91,6 +91,30 @@
         apiUrl: api_url
     });
     
+    
+    // Dark/Light Mode
+    
+    var html = document.querySelector('html'),
+    darkLight = document.querySelector('.it-dark-light')
+    darkLight.addEventListener('click', function(){
+       if(html.getAttribute('data-theme') === 'light'){
+           html.setAttribute('data-theme', 'dark')
+           localStorage.setItem('selected-theme', 'dark');
+       }else{
+           html.setAttribute('data-theme', 'light')
+           localStorage.setItem('selected-theme', 'light');
+       }
+       console.log(html.hasAttribute('data-theme'))
+    })
+    if(typeof(Storage) !== 'undefined') {
+       if (localStorage.getItem('selected-theme') == 'light') {
+           document.documentElement.setAttribute('data-theme', 'light');
+       }
+       else if (localStorage.getItem('selected-theme') == 'dark') {
+           document.documentElement.setAttribute('data-theme', 'dark');
+       }
+    }
+    
    
 </script>
 

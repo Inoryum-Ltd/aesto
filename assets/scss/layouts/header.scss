@@ -332,3 +332,29 @@ body:not(.it-head-open) .it-burger:hover .it-burger-inner::after {
         font-size: 6vmin;
     }
 }
+
+
+/* Dark/light */
+.it-dark-light {
+    cursor: pointer;
+}
+   
+    .icon-light {
+        display: none;
+    }
+    .icon-dark {
+        display: block;
+    }
+
+
+html[data-theme='dark'] .icon-light{
+   
+    
+            display: block;
+        }
+        
+html[data-theme='dark'] .icon-dark {
+            display: none;
+        }
+    
+

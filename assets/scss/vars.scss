@@ -33,3 +33,10 @@
     --margin: 2rem;
     --radius: 0.5rem;
 }
+
+html[data-theme="dark"] {
+      --color-base: #ffffff5c;
+      --color-bg: #171a1e;
+      --color-bg-white: #13161a;
+      --color-border: #333;
+    }

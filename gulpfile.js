@@ -42,9 +42,7 @@ function hbs(done) {
 function css(done) {
     var processors = [
         easyimport,
-        customProperties({preserve: false}),
-        colorFunction(),
-        autoprefixer(),
+        sass,
         cssnano()
     ];
 
