@@ -37,7 +37,7 @@ Aesto is a Ghost theme with clean & content focused design. The theme is fully r
     - Call to action for subscription in members, paid-members only post.  
     - Post visibility depending on access
 *   Translation ready  
-    - English & Spanish included.
+    - English, Spanish, Italian & Turkish included.
 *   Publication title & description
 *   Publication icon & Logo
 *   Custom excerpt support
@@ -68,6 +68,7 @@ For Documentation Checkout the Link [Here](https://inoryum.com/docs/aesto)
 *   Search Engine by [SearchinGhostEasy](https://github.com/gmfmi/searchinghost-easy)
 *   [FitVids](http://fitvidsjs.com/)
 *   Built on top of [Ghost Starter Theme](https://github.com/TryGhost/Starter)
+*   Demo Hosted By [spookey.io](https://https://spookey.io)
 
 
 
