@@ -68,7 +68,7 @@ For Documentation Checkout the Link [Here](https://inoryum.com/docs/aesto)
 *   Search Engine by [SearchinGhostEasy](https://github.com/gmfmi/searchinghost-easy)
 *   [FitVids](http://fitvidsjs.com/)
 *   Built on top of [Ghost Starter Theme](https://github.com/TryGhost/Starter)
-*   Demo Hosted By [spookey.io](https://https://spookey.io)
+*   Demo Hosted By [spookey.io](https://spookey.io)
 
 
 
