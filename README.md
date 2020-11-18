@@ -5,6 +5,7 @@ Aesto is a Ghost theme with clean & content focused design. The theme is fully r
 [Demo](https://aesto.inoryum.com) - [Download](https://github.com/Inoryum-Ltd/aesto/releases) - [Documentation](https://inoryum.com/docs/aesto) 
 
 
+### Aesto Demo is Hosted by [Spookey.io](https://spookey.io) Managed Ghost Publication Specially for NoCode Lovers
 
 
 # Theme features
