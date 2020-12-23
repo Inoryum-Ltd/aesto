@@ -8,6 +8,7 @@ Aesto is a Ghost theme with clean & content focused design. The theme is fully r
 ### Aesto Demo is Hosted by [Spookey.io](https://spookey.io) Managed Ghost Publication Specially for NoCode Lovers
 
 
+
 # Theme features
 
 *   Clean & responsive design
@@ -86,7 +87,7 @@ yarn
 $ yarn dev
 ```
 
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
+Now you can edit `/assets/scss/` files, which will be compiled to `/assets/built/` automatically.
 
 The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
 
