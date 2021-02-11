@@ -14,6 +14,16 @@
                 pagination_available_pages_number = '{{ pagination.pages }}',
                 api_url = '{{@site.url}}';
         </script>
+        <script>
+            if(typeof(Storage) !== 'undefined') {
+               if (localStorage.getItem('selected-theme') == 'light') {
+                   document.documentElement.setAttribute('data-theme', 'light');
+               }
+               else if (localStorage.getItem('selected-theme') == 'dark') {
+                   document.documentElement.setAttribute('data-theme', 'dark');
+               }
+            }
+        </script>
     
         {{ghost_head}}
         {{!-- Outputs SEO meta+structured data and important settings, should always be in <head> --}}
