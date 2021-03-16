@@ -1,12 +1,10 @@
-{{#if @labs.members}}
-	{{^has visibility="public"}}
-		<span class="it-member-label">
-			{{#has visibility="paid"}}
-				{{t "Premium"}}
-			{{/has}}
-			{{#has visibility="members"}}
+{{^has visibility="public"}}
+	<span class="it-member-label">
+		{{#has visibility="paid"}}
+			{{t "Premium"}}
+		{{/has}}
+		{{#has visibility="members"}}
 				{{t "Members"}}
-			{{/has}}
+		{{/has}}
 		</span>
-	{{/has}}
-{{/if}}
+{{/has}}

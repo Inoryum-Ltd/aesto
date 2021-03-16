@@ -1,9 +1,9 @@
 {{!--
 Re-usable card for linking to posts
 --}}
-{{#foreach posts visibility='all'}}
-    <article class="it-card {{post_class}} {{#if @first}}first it-grid-c3{{/if}}">
-        <a class="it-card-link" href="{{url}}" title="{{title}}">
+{{#foreach posts}}
+<article class="it-card {{post_class}} {{#if @first}}first it-grid-c3{{/if}}">
+    <a class="it-card-link" href="{{url}}" title="{{title}}">
             {{#if feature_image}}
             <figure class="it-card-image-wrapper">
                 <img class="it-card-image lazy"
@@ -64,5 +64,5 @@ Re-usable card for linking to posts
                 <h2 class="it-card-title">{{title}}</h2>
             </a>
         </div>
-    </article>
+</article>
 {{/foreach}}

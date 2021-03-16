@@ -21,7 +21,6 @@
         </div>
         <div class="it-head-actions">
             <div class="it-head-actions-list">
-                {{#if @labs.members}}
                 	{{#if @member}}
                 		<a class="account-link" href="{{@site.url}}/account/" title="{{t "Account"}}" >{{t "Account"}}</a>
                 		<a class="sign-out" href="#signout" data-members-signout>{{t "Sign out"}}</a>
@@ -29,7 +28,6 @@
                 		<a class="signin-link" href="{{@site.url}}/signin/">{{t "Signin"}}</a>
                 	    <a class="signup-link" href="{{@site.url}}/signup/">{{t "Signup"}}</a>
                 	{{/if}}
-                {{/if}}
                 <a class="search-link" href="#searchinghost-easy" title="{{t "Search"}}" aria-label="{{t "Search"}}">{{> "icons/search"}}</a>
                 <div class="it-dark-light">
                     <div class="icon-dark">

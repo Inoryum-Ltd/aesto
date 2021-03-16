@@ -2,7 +2,7 @@
     <div class="it-checkout-plan">
       <header class="it-checkout-plan-header">
         <h3>{{t "Monthly"}}</h3>
-        <span>{{@price.currency_symbol}}</span><strong>{{@price.monthly}}</strong> / {{t "month"}}
+        <span>{{price currency=currency}}</span><strong>{{@price.monthly}}</strong> / {{t "month"}}
       </header>
       <ul class="it-checkout-plan-content">
         <li>{{t "Full access to all private posts"}}</li>
@@ -15,7 +15,7 @@
     <div class="it-checkout-plan">
       <header class="it-checkout-plan-header">
         <h3>{{t "Yearly"}}</h3>
-        <span>{{@price.currency_symbol}}</span><strong>{{@price.yearly}}</strong> / {{t "year"}}
+        <span>{{price currency=currency}}</span><strong>{{@price.yearly}}</strong> / {{t "year"}}
       </header>
       <ul class="it-checkout-plan-content">
         <li>{{t "Full access to all private posts"}}</li>
