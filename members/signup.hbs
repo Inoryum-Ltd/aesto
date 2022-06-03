@@ -7,7 +7,7 @@
             <script>window.location = '{{@site.url}}';</script>
         {{else if @member}}
             {{!-- Logged in, not paying: Check out --}}
-            <div class="it-checkout-form it-canvas">
+            <div class="it-checkout-form">
                 <h1 class="it-checkout-title">{{t "Choose your subscription"}}</h1>
                 <p>{{t "Unlock full access to {sitetitle} to get premium contents & updates" sitetitle=@sit.title}}</p>
                 {{> "membership/plans"}} {{!-- partials/membership/plans.hbs --}}
