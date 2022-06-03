@@ -1,7 +1,7 @@
 {
     "name": "aesto",
     "description": "Minimalist blog & magazine theme for ghost",
-    "demo": "https://aesto.inoryum.com",
+    "demo": "https://aesto.visioun.com",
     "version": "4.0.0",
     "engines": {
         "ghost": ">=4.0.0"
@@ -15,9 +15,9 @@
         "preship": "yarn test"
     },
     "author": {
-        "name": "Inoryum Themes",
-        "email": "hello@inoryum.com",
-        "url": "https://inoryum.com"
+        "name": "Visioun by Inoryum",
+        "email": "hello@visioun.com",
+        "url": "https://visioun.com"
     },
     "gpm": {
         "type": "theme",
