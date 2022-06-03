@@ -4,7 +4,7 @@
     "demo": "https://aesto.visioun.com",
     "version": "4.0.0",
     "engines": {
-        "ghost": ">=4.0.0"
+        "ghost": ">=5.0.0"
     },
     "scripts": {
         "dev": "gulp",
