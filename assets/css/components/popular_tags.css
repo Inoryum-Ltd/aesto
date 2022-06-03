@@ -1,0 +1,48 @@
+/* Popular Tags */
+    .it-popular-tags {
+		    margin-bottom: 8vmin;
+		}
+    .it-popular-tags-title a {
+		    display: block;
+		    font-size: 1.8rem;
+		    font-weight: 600;
+		    border-bottom: 1px solid var(--color-border);
+		    padding-bottom: 1rem;
+		    margin-bottom: 2rem;
+		}
+    .it-tag-articles-teaser {
+		    display: flex;
+		    margin-bottom: 2rem;
+		    justify-content: center;
+		    flex-direction: row;
+		}
+    .it-teaser-content {
+		    flex: 1;
+		    align-self: center;
+		    width: 100%;
+		}
+    .it-teaser-content h3 {
+		    font-size: 1.6rem;
+		    font-weight: 600;
+		    line-height: 1.3;
+		}
+    .it-teaser-content h3 small {
+		    display: block;
+		    margin-top: .5rem;
+		    color: var(--color-primary);
+		}
+    .it-teaser-media {
+		    width: 100px;
+		    height: 85px;
+		    margin-right: 2rem;
+		    position: relative;
+		}
+    .it-teaser-media img {
+		    width: 100%;
+		    height: 100%;
+		    object-fit: cover;
+		    box-shadow: -5px 5px var(--color-border);
+		    border-radius: 7px;
+		}
+    
+   
