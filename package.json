@@ -33,10 +33,10 @@
         "magazine"
     ],
     "devDependencies": {
-        "autoprefixer": "10.4.4",
+        "autoprefixer": "10.4.13",
         "beeper": "2.1.0",
-        "cssnano": "5.1.7",
-        "gscan": "^4.31.0",
+        "cssnano": "5.1.14",
+        "gscan": "^4.36.0",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
@@ -45,7 +45,7 @@
         "gulp-util": "3.0.8",
         "gulp-watch": "5.0.1",
         "gulp-zip": "5.1.0",
-        "postcss": "8.4.12",
+        "postcss": "8.4.21",
         "postcss-easy-import": "3.0.0",
         "pump": "3.0.0"
     },
