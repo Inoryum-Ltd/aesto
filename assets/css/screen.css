@@ -172,14 +172,22 @@ html,
     line-height: 1.2 !important;
     opacity: .78;
 }
-.it-feature-image-wrapper {
+body.post-template .it-header > * {
     grid-column: wide-start/wide-end;
-    height: 490px;
+
+}
+
+.it-feature-image-wrapper {
     border-radius: 7px;
     overflow: hidden;
     position: relative;
     background: var(--color-bg);
     width: 100%;
+}
+
+body:not(.post-template) .it-feature-image-wrapper {
+    max-height: 490px;
+    grid-column: wide-start/wide-end;
 }
 
 .it-feature-image {
