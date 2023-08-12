@@ -190,6 +190,10 @@ body:not(.post-template) .it-feature-image-wrapper {
     grid-column: wide-start/wide-end;
 }
 
+body.post-template .it-post-meta {
+    margin-top: 1rem;
+}
+
 .it-feature-image {
     width: 100%;
     height: 100%;
