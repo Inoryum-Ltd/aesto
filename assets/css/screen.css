@@ -54,7 +54,7 @@ html,
 
 .it-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--container-width);
     margin: 0 auto;
 }
 

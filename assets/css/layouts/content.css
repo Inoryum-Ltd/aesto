@@ -3,57 +3,19 @@
 /* Content grid
 /* ---------------------------------------------------------- */
 
-.it-canvas {
+.it-canvas, .kg-width-full.kg-content-wide {
+    --gap: 4vw;
+    --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
+    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
+    --full: minmax(var(--gap), 1fr);
+
     display: grid;
     grid-template-columns:
-        [full-start]
-          minmax(calc(calc(100% - 1200px) / 2), 1fr)
-            [wide-start]
-                auto
-                    [main-start]
-                        720px
-                    [main-end]
-                auto
-            [wide-end]
-          minmax(calc(calc(100% - 1200px) / 2), 1fr)
-        [full-end]
-    ;
-}
-
-@media (max-width: 1296px) {
-    .it-canvas {
-        grid-template-columns:
-            [full-start]
-            4vw
-                [wide-start]
-                    auto
-                        [main-start]
-                            720px
-                        [main-end]
-                    auto
-                [wide-end]
-            4vw
-            [full-end]
-        ;
-    }
-}
-
-@media (max-width: 778px) {
-    .it-canvas {
-        grid-template-columns:
-            [full-start]
-            4vw
-                [wide-start]
-                    0
-                        [main-start]
-                            auto
-                        [main-end]
-                    0
-                [wide-end]
-            4vw
-            [full-end]
-        ;
-    }
+        [full-start] var(--full)
+        [wide-start] var(--wide)
+        [main-start] var(--main) [main-end]
+        var(--wide) [wide-end]
+        var(--full) [full-end];
 }
 
 .it-canvas > * {

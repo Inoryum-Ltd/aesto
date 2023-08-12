@@ -32,6 +32,8 @@
     --height: 4rem;
     --margin: 2rem;
     --radius: 0.5rem;
+
+    --container-width: 1200px;
 }
 
 html[data-theme="dark"] {
