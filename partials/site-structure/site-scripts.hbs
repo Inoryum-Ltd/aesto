@@ -1,5 +1,4 @@
 <script src="{{asset "built/app.min.js"}}"></script>
-<script src="https://cdn.jsdelivr.net/gh/gmfmi/searchinghost-easy@latest/dist/searchinghost-easy-basic.js"></script>
 
 {{!-- Fitvid & kg-gallery --}}
 {{#is "post, page"}}
@@ -84,12 +83,6 @@
     	use_native: true
     });
     lazyLoadInstance.update();
-    
-     //search 
-    new SearchinGhostEasy({
-        contentApiKey: content_key,
-        apiUrl: api_url
-    });
     
     
     // Dark/Light Mode
