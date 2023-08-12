@@ -27,6 +27,18 @@
   .it-card.first .it-card-image-wrapper {
     border-radius: 0;
 }
+
+.it-card-excerpt {
+    font-size: 2rem;
+    line-height: 1.4;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    margin: 1rem 0 0;
+    opacity: .75;
+    overflow: hidden;
+}
 @media (max-width: 767px) {
     
     .it-card.first, .it-card.first .it-card-link {
