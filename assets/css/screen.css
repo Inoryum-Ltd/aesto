@@ -185,10 +185,6 @@ body.post-template .it-header > * {
     width: 100%;
 }
 
-.post-template .it-feature-image-wrapper {
-    margin-top: 4rem;
-}
-
 body:not(.post-template) .it-feature-image-wrapper {
     max-height: 490px;
     grid-column: wide-start/wide-end;
