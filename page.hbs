@@ -2,6 +2,7 @@
 
 {{#post}}
 <article class="it-article {{post_class}}">
+    {{#match @page.show_title_and_feature_image}}
     <header class="it-header it-canvas">
         {{#if feature_image}}
             <figure class="it-feature-image-wrapper">
@@ -21,6 +22,7 @@
             <p class="it-excerpt">{{custom_excerpt}}</p>
         {{/if}}
     </header>
+    {{/match}}
     <div class="it-content it-canvas">
         {{content}}
     </div>

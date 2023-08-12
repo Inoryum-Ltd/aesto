@@ -36,7 +36,7 @@
         "autoprefixer": "10.4.13",
         "beeper": "2.1.0",
         "cssnano": "5.1.14",
-        "gscan": "^4.36.0",
+        "gscan": "^4.37.5",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
@@ -82,6 +82,5 @@
                 "width": 2000
             }
         }
-    },
-    "dependencies": {}
+    }
 }
