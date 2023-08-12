@@ -71,9 +71,11 @@
             </div>
             {{> "social-share"}} {{!-- partials/social-share.hbs --}}
         </div>
+        {{#if comments}}
         <section class="it-post-comments">
             {{comments}}
         </section>
+        {{/if}}
     </footer>
 
 </article>
