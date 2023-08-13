@@ -75,44 +75,44 @@
     
      //Lazy Load (New Lazyload Script)
      function lazyLoadImages() {
-            var supportsNativeLazyLoad = 'loading' in HTMLImageElement.prototype;
+        var supportsNativeLazyLoad = 'loading' in HTMLImageElement.prototype;
 
-            function applyCustomLazyLoad() {
-                var lazyImages = document.querySelectorAll('.lazy:not(.loaded)');
-                lazyImages.forEach(function(img) {
-                    var observer = new IntersectionObserver(function(entries) {
-                        entries.forEach(function(entry) {
-                            if (entry.isIntersecting) {
-                                var imgEl = entry.target;
-                                imgEl.setAttribute('src', imgEl.getAttribute('data-src'));
-                                imgEl.classList.add('loaded');
-                                observer.unobserve(imgEl);
-                            }
-                        });
-                    });
-                    observer.observe(img);
-                });
-            }
-
-            function applyNativeLazyLoad() {
-                var images = document.querySelectorAll('img[loading="lazy"]');
-                images.forEach(function(img) {
-                    img.addEventListener('load', function() {
-                        img.classList.add('loaded');
+        function applyCustomLazyLoad() {
+            var lazyImages = document.querySelectorAll('.lazy:not(.loaded)');
+            lazyImages.forEach(function(img) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            var imgEl = entry.target;
+                            imgEl.src = imgEl.getAttribute('data-src');
+                            imgEl.classList.add('loaded');
+                            observer.unobserve(imgEl);
+                        }
                     });
                 });
-            }
-
-            if (supportsNativeLazyLoad) {
-                applyNativeLazyLoad();
-            } else {
-                applyCustomLazyLoad();
-            }
+                observer.observe(img);
+            });
         }
 
-         window.addEventListener('load', function() {
-             lazyLoadImages();
-        });
+        function applyNativeLazyLoad() {
+            var images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(function(img) {
+                img.addEventListener('load', function() {
+                    img.classList.add('loaded');
+                });
+            });
+        }
+
+        if (supportsNativeLazyLoad) {
+            applyNativeLazyLoad();
+        } else {
+            applyCustomLazyLoad();
+        }
+    }
+
+    window.addEventListener('load', function() {
+        lazyLoadImages();
+    });
     
     
     // Dark/Light Mode
