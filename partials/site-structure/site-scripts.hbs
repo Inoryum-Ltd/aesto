@@ -62,11 +62,7 @@
             $load_posts_button.removeClass('loading');
 
             $('.it-postfeed').append(posts);
-            var lazyLoadInstance = new LazyLoad({
-                elements_selector: ".lazy",
-            	use_native: true
-            });
-
+            lazyLoadImages();
             pagination_next_page_number++;
 
             // If you are on the last pagination page, add the disabled attribute
@@ -77,12 +73,46 @@
         
     });
     
-     //Lazy Load
-    var lazyLoadInstance = new LazyLoad({
-        elements_selector: ".lazy",
-    	use_native: false
-    });
-    lazyLoadInstance.update();
+     //Lazy Load (New Lazyload Script)
+     function lazyLoadImages() {
+            var supportsNativeLazyLoad = 'loading' in HTMLImageElement.prototype;
+
+            function applyCustomLazyLoad() {
+                var lazyImages = document.querySelectorAll('.lazy:not(.loaded)');
+                lazyImages.forEach(function(img) {
+                    var observer = new IntersectionObserver(function(entries) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                var imgEl = entry.target;
+                                imgEl.setAttribute('src', imgEl.getAttribute('data-src'));
+                                imgEl.classList.add('loaded');
+                                observer.unobserve(imgEl);
+                            }
+                        });
+                    });
+                    observer.observe(img);
+                });
+            }
+
+            function applyNativeLazyLoad() {
+                var images = document.querySelectorAll('img[loading="lazy"]');
+                images.forEach(function(img) {
+                    img.addEventListener('load', function() {
+                        img.classList.add('loaded');
+                    });
+                });
+            }
+
+            if (supportsNativeLazyLoad) {
+                applyNativeLazyLoad();
+            } else {
+                applyCustomLazyLoad();
+            }
+        }
+
+         window.addEventListener('load', function() {
+             lazyLoadImages();
+         }
     
     
     // Dark/Light Mode
