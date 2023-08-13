@@ -13,7 +13,7 @@
                             <a class="it-tag-articles-teaser" title="{{title}}" href="{{url}}">
                                 <div class="it-teaser-media">
                                     {{#if feature_image}}
-                                        <img class="lazy" alt="" data-src="{{feature_image}}">
+                                        {{> "image" popular_tag=true picture_type="post"}}
                                     {{/if}}
                                 </div>
                                 <div class="it-teaser-content">

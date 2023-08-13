@@ -1,6 +1,6 @@
  <picture class="it-card-picture">
               <source 
-                srcset="
+                data-srcset="
                 {{img_url feature_image size="xxs" format="avif"}} 30w,
                 {{img_url feature_image size="xs" format="avif"}} 100w,
                 {{img_url feature_image size="s" format="avif"}} 300w,
@@ -15,7 +15,7 @@
                 type="image/avif"
               >
               <source 
-                srcset="
+                data-srcset="
                 {{img_url feature_image size="xxs" format="webp"}} 30w,
                 {{img_url feature_image size="xs" format="webp"}} 100w,
                 {{img_url feature_image size="s" format="webp"}} 300w,
@@ -31,7 +31,7 @@
 
               >
               <img
-                srcset="
+                data-srcset="
                 {{img_url feature_image size="xxs"}} 30w,
                 {{img_url feature_image size="xs"}} 100w,
                 {{img_url feature_image size="s"}} 300w,
@@ -46,7 +46,7 @@
                 {{#if card}}
                 data-src="{{img_url feature_image size="m"}}"
                 {{else if popular_tag}}
-                data-src="{{img_url feature_image size="xs"}}"
+                data-src="{{img_url feature_image size="s"}}"
                 {{else}}
                 data-src="{{img_url feature_image size="l"}}"
                 {{/if}} 
