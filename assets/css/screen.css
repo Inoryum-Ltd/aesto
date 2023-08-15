@@ -141,6 +141,10 @@ html,
     }
 }
 
+.page-template article {
+    margin-bottom: 4vmin;
+}
+
 
 /* Post
 /* ---------------------------------------------------------- */

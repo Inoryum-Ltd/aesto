@@ -327,6 +327,15 @@
 }
 
 
+
+.kg-embed-card > :where(iframe[src*="youtube.com"],iframe[src*="vimeo.com"]) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+
+
 /* Tables
 /* ---------------------------------------------------------- */
 
