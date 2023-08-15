@@ -84,9 +84,17 @@
         },
         "custom": {
             "use_portal_links": {
-                "type": "boolean",
+                "type": "text",
                 "default": true,
                 "description": "If true the portal links will be used else you have to upload the routes.yaml file to use custom pages"
+            },
+            "cta_title": {
+                "type": "text",
+                "default": "Subscribe"
+            },
+            "cta_text": {
+                "type": "text",
+                "default": "Stay up to date! Get all the latest & greatest posts delivered straight to your inbox"
             }
         }
     }
