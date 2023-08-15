@@ -4,7 +4,7 @@
 :root {
 
     /* Colours */
-    --color-primary: #c32b48;
+    --color-primary: var(--ghost-accent-color),#c32b48;
     --color-success: #084c16;
     --color-danger: #c31717;
     --color-base: #3c4257;
