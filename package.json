@@ -98,7 +98,6 @@
             },
             "featured_tag_slugs": {
                 "type": "text",
-                "default": "news",
                 "description": "Add the tag slugs that you want to showcase on homepage comma seperated eg. tag1,tag2,tag3",
                 "group": "homepage"
             }

@@ -1,3 +1,4 @@
+{{#if @custom.featured_tag_slugs}}
 <div class="it-popular-tags it-grid-c3">
 	{{#get "tags" filter="slug:[{{@custom.featured_tag_slugs}}]" limit="all" include="count.posts" order="count.posts desc"}}
         {{#foreach tags}}
@@ -29,3 +30,4 @@
         {{/foreach}}
     {{/get}}
 </div>
+{{/if}}
