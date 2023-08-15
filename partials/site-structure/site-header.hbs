@@ -22,11 +22,11 @@
         <div class="it-head-actions">
             <div class="it-head-actions-list">
                 	{{#if @member}}
-                		<a class="account-link" href="{{@site.url}}/account/" {{#if @custom.use_portal_links}} data-portal-account{{/if}}title="{{t "Account"}}" >{{t "Account"}}</a>
+                		<a class="account-link" href="{{@site.url}}/account/" {{#if @custom.use_portal_links}} data-portal="account"{{/if}}title="{{t "Account"}}" >{{t "Account"}}</a>
                 		<a class="sign-out" href="#signout" data-members-signout>{{t "Sign out"}}</a>
                 	{{else}}
-                		<a class="signin-link" href="{{@site.url}}/signin/" {{#if @custom.use_portal_links}} data-portal-signin{{/if}}>{{t "Signin"}}</a>
-                	    <a class="signup-link" href="{{@site.url}}/signup/"{{#if @custom.use_portal_links}} data-portal-signup{{/if}}>{{t "Signup"}}</a>
+                		<a class="signin-link" href="{{@site.url}}/signin/" {{#if @custom.use_portal_links}} data-portal="signin"{{/if}}>{{t "Signin"}}</a>
+                	    <a class="signup-link" href="{{@site.url}}/signup/"{{#if @custom.use_portal_links}} data-portal="signup"{{/if}}>{{t "Signup"}}</a>
                 	{{/if}}
                 <a class="search-link" href=":javascript" title="{{t "Search"}}" aria-label="{{t "Search"}}" data-ghost-search>{{> "icons/search"}}</a>
                 <div class="it-dark-light">
