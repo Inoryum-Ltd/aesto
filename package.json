@@ -84,7 +84,7 @@
         },
         "custom": {
             "use_portal_links": {
-                "type": "text",
+                "type": "boolean",
                 "default": true,
                 "description": "If true the portal links will be used else you have to upload the routes.yaml file to use custom pages"
             },
