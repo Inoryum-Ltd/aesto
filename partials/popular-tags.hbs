@@ -1,5 +1,5 @@
 <div class="it-popular-tags it-grid-c3">
-	{{#get "tags" limit="3" include="count.posts" order="count.posts desc"}}
+	{{#get "tags" filter="slug:[{{@custom.featured_tag_slugs}}]" limit="all" include="count.posts" order="count.posts desc"}}
         {{#foreach tags}}
             <div class="it-popular-tags-item">
                 <div class="it-popular-tags-title">
