@@ -33,6 +33,15 @@
 .kg-width-full img {
     width: 100%;
 }
+.kg-width-wide,
+.kg-content-wide > div {
+    grid-column: wide-start / wide-end;
+}
+
+/* Remove space between full-width cards */
+ .it-canvas > .kg-width-full + .kg-width-full:not(.kg-width-full.kg-card-hascaption + .kg-width-full) {
+    margin-top: 0;
+} 
 
 
 /* Content & Typography
