@@ -7,15 +7,7 @@
             <header class="it-header it-canvas">
                 {{#if cover_image}}
     	            <figure class="it-feature-image-wrapper">
-    	                <img class="it-feature-image" 
-    	                    srcset="{{img_url cover_image size="s"}} 300w,
-    	                            {{img_url cover_image size="m"}} 600w,
-    	                            {{img_url cover_image size="l"}} 1000w,
-    	                            {{img_url cover_image size="xl"}} 2000w"
-    	                    sizes="(max-width: 1000px) 490px, 2000px"
-    	                    src="{{img_url cover_image size="m"}}"
-    	                    alt="{{title}}"
-    	                />
+    	                 {{>image image_url="cover_image" picture_type="author-cover" card=false}}
     	            </figure>
     	        {{/if}}
     	        <div class="it-author-image">
